@@ -1,0 +1,55 @@
+@import "./vars";
+
+* {
+    line-height: normal;
+}
+
+ a {
+    outline: none !important;
+}
+
+ a:hover {
+    color: currentColor;
+    text-decoration: none;
+}
+
+ button {
+    outline: none !important;
+}
+
+ h1, h2, h3, h4, h5, h6 {
+    margin:0;
+}
+
+ figure {
+    margin:0;
+}
+
+
+ ul, ol, p, address {
+    margin: 0;
+    padding: 0
+}
+
+ button:focus, input:focus, textarea:focus 
+ {
+    outline: none !important;
+    box-shadow: none !important
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+ body {
+    width:100%;
+    font-family:'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: $dark;
+    line-height: normal;
+    min-width:320px;
+    overflow-x:hidden;
+}

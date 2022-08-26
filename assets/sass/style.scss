@@ -1,0 +1,22 @@
+@import "./fonts";
+@import "./reset";
+@import "./vars";
+
+// Template
+
+.template {
+    position: relative;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+// Container
+
+.container {
+    max-width: 1230px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+@import "./header";
+@import "./intro";
