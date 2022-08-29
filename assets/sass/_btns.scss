@@ -1,0 +1,44 @@
+// Intro
+.btn {
+    background-color: transparent;
+    color: $dark;
+    font-size: 16px;
+    line-height: 25.44px / 16px * 100%;
+    padding: 10px 16px;
+    cursor: pointer;
+    border: 1px solid $dark;
+    transition: color .2s linear;
+
+    &:hover {
+        background-color: $dark;
+        color: $white;
+    }
+}
+
+.btn--solid {
+    background-color: $white;
+    color: $dark;
+    font-size: 16px;
+    line-height: 24px / 16px * 100%;
+    padding: 10px 32px 10px 30px;
+    cursor: pointer;
+    border: 2px solid $white;
+    transition: color .2s linear;
+
+    &:hover {
+        background-color: transparent;
+        border: 2px solid $white;
+        color: white;
+    }
+}
+
+.item--button {
+    color: $white;
+    background-color: $dark;
+
+    &:hover {
+        background-color: $white;
+        color: $dark;
+        border: 2px solid $dark;
+    }
+}

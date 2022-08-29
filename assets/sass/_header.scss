@@ -11,10 +11,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .header__logo {
     max-width: 357px;
+    z-index: 10;
+
+    @media (max-width: 1299px) {
+        width: 300px;
+    }
+
+    @media (max-width: 1099px) {
+        width: 250px;
+    }
+ 
 }
 
 .logo {
@@ -33,6 +44,26 @@
 .menu {
     color: $white;
     line-height: 1.21;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 1049px) {
+        position: fixed;
+        flex-direction: column;
+        top: 0;
+        width: 100%;
+        height: fit-content;
+        background-color: $dark;
+        padding: 100px 0 56px 0;
+        right: -100%;
+        transition: all .2s linear;
+        overflow: auto;
+    }
+
+}
+
+.menu.active {
+    right: 0;
 }
 
 .menu__list {
@@ -42,9 +73,19 @@
         list-style: none;
         padding-left: 45px;
 
-        &:first-child {
-            padding-left: 0;
+        @media (max-width: 1299px) {
+            padding-left: 25px;
         }
+
+        @media (max-width: 1049px) {
+            margin-bottom: 33px;
+            padding-left: 0;
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 1049px) {
+        display: block;
     }
 }
 
@@ -64,6 +105,10 @@
                 width: 0;
                 border-radius: 3px;
                 transition: .2s;
+
+                @media (max-width: 1049px) {
+                    content: none;
+                }
             }
 
         &:hover {
@@ -71,11 +116,20 @@
                 width: 100%;
             }
         }
+
+    &:first-child {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .hasDropdown {
     position: relative;
     padding-bottom: 10px;
+
+    &:first-child {
+        padding:0 0 0 8px;
+    }
 }
 
 .dropdown {
@@ -92,16 +146,37 @@
     visibility: hidden;
     transition: opacity 0.8s ease;
 
+    @media (max-width: 1049px) {
+        display: none;
+        opacity: 1;
+        visibility: visible;
+        position: static;
+        background: none;
+        border: 0;
+        box-shadow: none;
+        padding-top: 17px;
+    }
+
     .dropdown__item {
         list-style: none;
         padding: 12px 15px;
         border-bottom: 1px solid #c4c4c4;
         transition: background-color 0.2s ease;
 
+        @media (max-width: 1049px) {
+            border: 0;
+            padding: 15px;
+            margin: 0;
+        }
+
         a {
             color: $dark;
             text-decoration: none;
             position: relative;
+
+            @media (max-width: 1049px) {
+                color: $white;
+            }
         }
 
         &:hover {
@@ -110,13 +185,27 @@
     }
 }
 
+.dropdown.opened {
+    display: block;
+}
+
 .hasDropdown:hover .dropdown {
     opacity: 1;
     visibility: visible;
     pointer-events: unset;
+
 }
 
 .hasDropdown:hover svg {
+    transform: rotate(180deg);
+    transition: all .2s linear;
+
+    @media (max-width: 1049px) {
+        transform: none;
+    }
+}
+
+.hasDropdown.opened  svg{
     transform: rotate(180deg);
     transition: all .2s linear;
 }
@@ -130,10 +219,78 @@
     }
 }
 
+.menu__mbl {
+    display: none;
+
+    @media (max-width: 1049px) {
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 21px;
+    right: 0;
+    }
+    
+    span {
+        position: absolute;
+        background-color: $white;
+        left: 0;
+        top: 9px;
+        height: 3px;
+        width: 100%;
+        transition: all .2s linear;
+    }
+
+    &::before,
+    &::after {
+        content: '';
+        background-color: $white;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        left: 0;
+        transition: all .2s linear;
+    }
+
+    &::before {
+        top: 1px;
+    }
+
+    &::after {
+        bottom: 1px;
+    }
+}
+
+.menu__mbl.active {
+    &::before {
+        transform: rotate(45deg);
+        top: 9px;
+    }
+
+    &::after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+
+    span {
+        scale: 0;
+    }
+}
+
 .phone {
     padding: 18px 21px 18px 16px;
     border: 2px solid $white;
+    margin-left: 81px;
     transition: all 0.3s ease;
+
+    @media (max-width: 1299px) {
+        padding: 14px 12px 14px 12px;
+        margin-left: 45px;
+    }
+
+    @media (max-width: 1049px) {
+        margin-left: 0;
+        order: 2;
+    }
 
     a {
         color: $white;
@@ -163,11 +320,28 @@
 .cart {
     display: flex;
     align-items: center;
+    margin-left: 57px;
     
+    @media (max-width: 1049px) {
+        order: 1;
+        margin-left: 0;
+        margin-top: 71px;
+        margin-bottom: 51px;
+    }
+
     .cart-block {
         color: $white;
         display: flex;
         flex-direction: column;
         padding-left: 19px;
+    }
+}
+
+.cart__mbl {
+    margin-right: 60px;
+    display: none;
+
+    @media (max-width: 1049px) {
+        display: block;
     }
 }

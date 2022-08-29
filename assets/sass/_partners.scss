@@ -1,0 +1,51 @@
+@import "./vars";
+
+.partners {
+    position: relative;
+}
+
+.partners_bg {
+    position: absolute;
+    top: -47px;
+    left: 0;
+    width: 51%;
+    height: 248px;
+    background-color: $dark;
+}
+
+.partners__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.partners__info {
+    position: relative;
+    z-index: 10;
+    color: $white;
+    width: 39%;
+
+    .partners__info--title {
+        color: $white;
+        margin-bottom: 28px;
+    }
+
+    .partners__info--text {
+        line-height: 25px / 16px * 100%;
+    }
+}
+
+.partners__slider {
+    width: 44%;
+    text-align: center;
+
+    .swiper-scrollbar-drag {
+        background: $dark;
+        height: 3px;
+        border-radius: 0;
+    }
+
+    .swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
+        height: 3px;
+    }
+}

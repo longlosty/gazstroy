@@ -1,0 +1,43 @@
+@import "./vars";
+
+.catalog {
+    margin-top: 149px;
+}
+
+.catalog__intro {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 46px;
+}
+
+.catalog__content {
+    display: flex;
+    flex-wrap: wrap;
+
+    .catalog__content--item {
+        width: 48.75%;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        box-shadow: 0px 0px 29px rgba(0, 0, 0, 0.09);
+        display: flex;
+        align-items: center;
+
+
+    }
+}
+
+.item__info {
+    padding: 39px 0 45px 37px;
+    width: 44%;
+
+    .item__title {
+        font-size: 22px;
+        line-height: 35px / 22px * 100%;
+        margin-bottom: 47px;
+    }
+}
+
+.item__image {
+    width: 45%;
+}
+

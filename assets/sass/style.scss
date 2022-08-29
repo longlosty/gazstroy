@@ -1,22 +1,40 @@
 @import "./fonts";
 @import "./reset";
 @import "./vars";
+@import "./btns";
 
 // Template
-
 .template {
     position: relative;
     max-width: 1920px;
     margin: 0 auto;
 }
 
-// Container
+.lock {
+    overflow: hidden;
+}
 
+// Container
 .container {
     max-width: 1230px;
     padding: 0 15px;
     margin: 0 auto;
+
+    @media (max-width: 1299px) {
+        max-width: 1100px;
+    }
+}
+
+// Reusable 
+.sectionTitle {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 35px;
+    line-height: 37px / 35px * 100%;
+    font-weight: 500;
+    text-transform: uppercase;
 }
 
 @import "./header";
 @import "./intro";
+@import "./partners";
+@import "./catalog";
