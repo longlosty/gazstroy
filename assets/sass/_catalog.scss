@@ -13,6 +13,7 @@
 .catalog__content {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 
     .catalog__content--item {
         width: 48.75%;
@@ -39,5 +40,12 @@
 
 .item__image {
     width: 45%;
+    display: flex;
+    justify-content: center;
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
 }
 

@@ -38,3 +38,14 @@
 @import "./intro";
 @import "./partners";
 @import "./catalog";
+@import "./about";
+@import "./news";
+
+.map {
+    margin-top: 67px;
+    height: 436px;
+    filter: grayscale(1);
+}
+
+@import "./contacts";
+@import "./footer";

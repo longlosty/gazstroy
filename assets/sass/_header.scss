@@ -16,7 +16,7 @@
 
 .header__logo {
     max-width: 357px;
-    z-index: 10;
+    z-index: 20;
 
     @media (max-width: 1299px) {
         width: 300px;
@@ -64,6 +64,7 @@
 
 .menu.active {
     right: 0;
+    z-index: 15;
 }
 
 .menu__list {
@@ -87,6 +88,10 @@
     @media (max-width: 1049px) {
         display: block;
     }
+}
+
+.menu.active .menu__list li:first-child {
+    padding: 0 0 0 8px;
 }
 
 .menu__link {
@@ -126,10 +131,6 @@
 .hasDropdown {
     position: relative;
     padding-bottom: 10px;
-
-    &:first-child {
-        padding:0 0 0 8px;
-    }
 }
 
 .dropdown {
@@ -261,6 +262,7 @@
 }
 
 .menu__mbl.active {
+    z-index: 20;
     &::before {
         transform: rotate(45deg);
         top: 9px;

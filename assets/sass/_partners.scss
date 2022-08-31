@@ -24,6 +24,7 @@
     z-index: 10;
     color: $white;
     width: 39%;
+    padding-top: 20px;
 
     .partners__info--title {
         color: $white;
@@ -38,6 +39,8 @@
 .partners__slider {
     width: 44%;
     text-align: center;
+    position: relative;
+    padding-top: 48px;
 
     .swiper-scrollbar-drag {
         background: $dark;
@@ -47,5 +50,6 @@
 
     .swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
         height: 3px;
+        top: 168px;
     }
 }

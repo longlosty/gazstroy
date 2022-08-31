@@ -1,0 +1,66 @@
+@import "./vars";
+
+.about {
+    margin-top: 55px;
+    position: relative;
+}
+
+.about__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about__info {
+    width: 35%;
+
+    .about__info--text {
+        line-height: 24px / 16px * 100%;
+        margin-top: 35px;
+        margin-bottom: 42px;
+    }
+
+}
+
+.about__content {
+    z-index: 10;
+    width: 59.7%;
+    background: $dark url(../template/images/about/about-block.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+}
+
+.about__content--info {
+    padding: 72px 149px 52px 102px;
+    
+    justify-content: center;
+    z-index: 15;
+    color: $white;
+    text-transform: uppercase;
+    font-family: 'Ubuntu', sans-serif;
+
+    .about__content--years {
+        font-size: 66px;
+        line-height: 106.4%;
+        font-weight: 500;
+        margin-bottom: 50px;
+    }
+
+    .about__contetn--subtitle {
+        font-size: 35px;
+        font-weight: 700;
+        line-height: 122.4%;   
+    }
+    
+}
+
+.about_bg {
+    position: absolute;
+    top: -21px;
+    right: 0;
+    width: 53.54%;
+    height: 400px;
+    background-color: $light;
+}

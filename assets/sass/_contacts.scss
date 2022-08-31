@@ -1,0 +1,58 @@
+@import "./vars";
+
+.contacts {
+    position: relative;
+}
+
+.contacts__inner {
+    position: relative;
+    top: -97px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $dark;
+}
+
+.contacts__content {
+    color: $white;
+    padding: 55px 0 59px 58px;
+
+    .contacts__content--item {
+        display: flex;
+        margin-bottom: 32px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .contacts__content--text {
+            line-height: 19px / 16px * 100%;
+            margin-left: 18px;
+        }
+    }
+}
+
+.contacts__question {
+    color: $white;
+    width: 40%;
+    margin-right: 100px;
+
+    .contacts__ask {
+        font-family: 'Ubuntu';
+        font-size: 25px;
+        line-height: 106.4%;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-bottom: 26px;
+    }
+
+    .contacts__call {
+        margin-bottom: 20px;
+    }
+
+    .confidency {
+        font-size: 12px;
+        line-height: 15px;
+    }
+}
+
