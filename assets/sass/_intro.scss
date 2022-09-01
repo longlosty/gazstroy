@@ -13,6 +13,10 @@
     color: $white;
     padding-top: 193px;
 
+    @media (max-width: 699px) {
+        padding-top: 155px;
+    }
+
     .intro__info--title {
         font-family: 'Ubuntu', sans-serif;
         font-size: 40px;
@@ -20,15 +24,35 @@
         line-height: 42px / 40px * 100%;
         text-transform: uppercase;
         margin-bottom: 20px;
+
+        @media (max-width: 699px) {
+            font-size: 30px;
+        }
+
+        @media (max-width: 499px) {
+            font-size: 25px;
+        }
     }
 
     .intro__info--subtitle {
         font-size: 20px;
         line-height: 24px / 20px * 100%;
         margin-bottom: 20px;
+
+        @media (max-width: 699px) {
+            font-size: 16px;
+            margin-bottom: 31px;
+        }
+
+        @media (max-width: 499px) {
+            font-size: 14px;
+        }
     }
 
     .intro__info--button {
         margin-bottom: 106px;
+        @media (max-width: 699px) {
+            margin-bottom: 149px;
+        }
     }
 }

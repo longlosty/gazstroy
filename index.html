@@ -226,7 +226,7 @@
                 <div class="about__content">
                     <div class="about__content--info">
                         <div class="about__content--years">
-                            <p id="aboutYears">0</p>
+                            <span class='numscroller' data-min='1' data-max='18' data-delay='1.5' data-increment='1'>0</span>
                             <p>лет</p>
                         </div>
                         <div class="about__contetn--subtitle">подзаголовок из нескольких строчек </div>
@@ -239,12 +239,34 @@
 
     <section class="news">
         <div class="container">
-            <div class="swiper newsSwiper">
-                <div class="swiper-wrapper">
-
+            <div class="news__inner">
+                <div class="news__curr">
+                    <div class="news_bg"></div>
+                    <div class="news__curr--info">
+                        <div class="news__curr--title">Активно помогаем проектным организациям</div>
+                        <div class="news__curr--text">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке.</div>
+                        <button class="btn--solid news--button">Подробнее</button>
+                    </div>
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+                
+                <div class="news__slider">
+                    <div class="swiper newsSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="news__item">
+                                    <div class="news__title">новость 2</div>
+                                    <div class="news__text">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру...</div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">Slide 2</div>
+                            <div class="swiper-slide">Slide 3</div>
+                            <div class="swiper-slide">Slide 4</div>
+                            <div class="swiper-slide">Slide 5</div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -338,6 +360,8 @@
         </div>
     </footer>
 
+<script src="assets/js/jquery-3.6.1.min.js"></script>
+<script src="assets/js/numscroller-gh-pages/numscroller-1.0.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 <script src="assets/js/index.js"></script>
 </body>

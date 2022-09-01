@@ -26,6 +26,14 @@
     width: 39%;
     padding-top: 20px;
 
+    @media (max-width: 1299px) {
+        width: 44%;
+    }
+
+    @media (max-width: 999px) {
+        width: 50%;
+    }
+
     .partners__info--title {
         color: $white;
         margin-bottom: 28px;

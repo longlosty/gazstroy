@@ -20,53 +20,24 @@ dropdownLink.addEventListener("click", function() {
 
 // Partners slider
 new Swiper (".partnersSwiper", {
-    slidesPerView: 2,
+    slidesPerView: 1,
     scrollbar: {
         el: ".swiper-scrollbar",
     },
     autoplay: {
         delay: 2500,
       },
+
+    breakpoints: {
+        899: {
+            slidesPerView: 2,
+        }
+    }
 });
 
-// About
-const time = 1500;
-const step = 1;
-
-function incrementingNum(num, elem) {
-    let result = 0;
-    let t = Math.round(time / (num / step));
-
-    let interval = setInterval( () => {
-        result += step;
-        if (result == num) {
-            clearInterval(interval);
-        }
-        elem.innerHTML = result;
-    },
-    t);
-
-}
-const aboutYears = document.querySelector('#aboutYears');
-// incrementingNum(18, aboutYears);
-
-let scrollPos = window.scrollY;
-let aboutH = document.querySelector('.about').scrollHeight + 200;
-
-window.addEventListener("scroll", function () {;
-    scrollPos = this.scrollY;
-    let used = true;
-    console.log(scrollPos, aboutH);
-    if (scrollPos >= aboutH && used == true) {
-        used = false;
-        incrementingNum(18, aboutYears);
-    }
-    
-    
-})
-
 // News slider
-var swiper = new Swiper(".newsSwiper", {
+new Swiper(".newsSwiper", {
+    // loop: true,
     slidesPerView: 3,
     navigation: {
         nextEl: ".swiper-button-next",
@@ -84,6 +55,7 @@ function up() {
 	} else clearTimeout(t);
 	return false;
 }
+
 
 
 
