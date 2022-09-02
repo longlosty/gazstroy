@@ -29,9 +29,17 @@ new Swiper (".partnersSwiper", {
       },
 
     breakpoints: {
+        499: {
+            slidesPerView: 2,
+        },
+
+        799: {
+            slidesPerView: 1,
+        },
+
         899: {
             slidesPerView: 2,
-        }
+        },
     }
 });
 

@@ -25,11 +25,15 @@
         text-transform: uppercase;
         margin-bottom: 20px;
 
+        @media (max-width: 799px) {
+            font-size: 35px;
+        }
+
         @media (max-width: 699px) {
             font-size: 30px;
         }
 
-        @media (max-width: 499px) {
+        @media (max-width: 399px) {
             font-size: 25px;
         }
     }
@@ -46,13 +50,6 @@
 
         @media (max-width: 499px) {
             font-size: 14px;
-        }
-    }
-
-    .intro__info--button {
-        margin-bottom: 106px;
-        @media (max-width: 699px) {
-            margin-bottom: 149px;
         }
     }
 }

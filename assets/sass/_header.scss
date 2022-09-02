@@ -76,15 +76,15 @@
 
     li {
         list-style: none;
-        padding-left: 45px;
+        margin-left: 45px;
 
         @media (max-width: 1299px) {
-            padding-left: 25px;
+            margin-left: 25px;
         }
 
         @media (max-width: 1049px) {
             margin-bottom: 33px;
-            padding-left: 0;
+            margin-left: 0;
             text-align: center;
         }
     }

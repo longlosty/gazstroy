@@ -19,10 +19,6 @@
     max-width: 1230px;
     padding: 0 15px;
     margin: 0 auto;
-
-    @media (max-width: 1299px) {
-        max-width: 1100px;
-    }
 }
 
 // Reusable 
@@ -32,6 +28,18 @@
     line-height: 37px / 35px * 100%;
     font-weight: 500;
     text-transform: uppercase;
+
+    @media (max-width: 799px) {
+        font-size: 30px;
+    }
+
+    @media (max-width: 699px) {
+        font-size: 25px;
+    }
+
+    @media (max-width: 399px) {
+        font-size: 20px;
+    }
 }
 
 @import "./header";
@@ -45,6 +53,10 @@
     margin-top: 67px;
     height: 436px;
     filter: grayscale(1);
+
+    @media (max-width: 799px) {
+        margin-top: 41px;
+    }
 }
 
 @import "./contacts";

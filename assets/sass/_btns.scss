@@ -15,6 +15,7 @@
         background-color: $dark;
         color: $white;
     }
+
 }
 
 .btn--solid {
@@ -35,6 +36,13 @@
 }
 
 //Catalog
+.catalog--button {
+    @media(max-width: 499px) {
+        font-size: 12px;
+        padding: 8px 10px 8px 15px;
+    }
+}
+
 .item--button {
     color: $white;
     background-color: $dark;
