@@ -95,7 +95,7 @@
 }
 
 .menu.active .menu__list li:first-child {
-    padding: 0 0 0 8px;
+    padding: 0 0 0 35px;
 }
 
 .menu__link {
@@ -192,6 +192,9 @@
 
 .dropdown.opened {
     display: block;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: unset;
 }
 
 .hasDropdown:hover .dropdown {

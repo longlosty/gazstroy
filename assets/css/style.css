@@ -304,7 +304,7 @@ body {
 }
 
 .menu.active .menu__list li:first-child {
-  padding: 0 0 0 8px;
+  padding: 0 0 0 35px;
 }
 
 .menu__link {
@@ -397,6 +397,9 @@ body {
 
 .dropdown.opened {
   display: block;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: unset;
 }
 
 .hasDropdown:hover .dropdown {
@@ -553,6 +556,14 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   height: 518px;
+}
+@media (max-width: 599px) {
+  .intro {
+    background: #00233E url("../template/images/intro/intro-mbl.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }
 
 .intro__info {
