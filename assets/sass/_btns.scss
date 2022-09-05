@@ -67,7 +67,7 @@
 }
 
 //Contacts 
-.contacts--call {
+.contacts--phone {
     color: $white;
     border: 1px solid $white;
     background-color: transparent;
@@ -79,4 +79,19 @@
         line-height: 24px;
     }
 
+    @media (max-width: 1199px) {
+        margin-right: 15px;
+    }
+    
+    @media (max-width: 799px) {
+        width: 229px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+.contacts--call {
+    @media (max-width: 799px) {
+        width: 229px;
+    }
 }

@@ -11,31 +11,75 @@
     align-items: center;
     justify-content: space-between;
     background-color: $dark;
+
+    @media (max-width: 599px) {
+        flex-direction: column;
+    }
 }
 
 .contacts__content {
     color: $white;
     padding: 55px 0 59px 58px;
 
+    @media (max-width: 1199px) {
+        padding: 30px 0 35px 25px;
+    }
+
+    @media (max-width: 899px) {
+        font-size: 14px;
+    }
+
+    @media (max-width: 599px) {
+        font-size: 16px;
+        padding: 46px 36px 66px 23px;
+    }
+
     .contacts__content--item {
         display: flex;
         margin-bottom: 32px;
 
+        @media (max-width: 599px) {
+            margin-bottom: 28px;
+        }
+
         &:last-child {
             margin-bottom: 0;
         }
-
+        
         .contacts__content--text {
             line-height: 19px / 16px * 100%;
             margin-left: 18px;
+
+            @media (max-width: 899px) {
+                margin-left: 14px;
+            }
+
+            @media (max-width: 599px) {
+                margin-left: 18px;
+            }
+
+            a {
+                color: $white;
+                text-decoration: none;
+            }
         }
     }
 }
 
 .contacts__question {
     color: $white;
-    width: 40%;
     margin-right: 100px;
+
+    @media (max-width: 1199px) {
+        margin-right: 15px;
+    }
+
+    @media (max-width: 599px) {
+        margin-right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
     .contacts__ask {
         font-family: 'Ubuntu';
@@ -44,15 +88,62 @@
         font-weight: 500;
         text-transform: uppercase;
         margin-bottom: 26px;
+
+        @media (max-width: 1199px) {
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 899px) {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 799px) {
+            margin: 10px 0;
+        }
+
+        @media (max-width: 599px) {
+            margin-bottom: 28px;
+            margin-top: 0;
+        }
     }
 
     .contacts__call {
         margin-bottom: 20px;
+
+        @media (max-width: 799px) {
+            max-width: 229px;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 599px) {
+            margin-bottom: 20px;
+        }
     }
 
     .confidency {
         font-size: 12px;
         line-height: 15px;
+        max-width: 483px;   
+        
+        @media (max-width: 999px) {
+            max-width: 410px;
+        }
+
+        @media (max-width: 799px) {
+            margin-bottom: 10px;
+            max-width: 350px;
+        }
+
+        @media (max-width: 699px) {
+            margin-bottom: 10px;
+            max-width: 330px;
+        }
+
+        @media (max-width: 599px) {
+            margin: 22px 25px 20px 31px;
+            max-width: unset;
+        }
     }
 }
 

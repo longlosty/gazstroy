@@ -45,12 +45,35 @@ new Swiper (".partnersSwiper", {
 
 // News slider
 new Swiper(".newsSwiper", {
-    // loop: true,
+    loop: true,
     slidesPerView: 3,
+
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
-      },
+    },
+
+    breakpoints: {
+        499: {
+            slidesPerView: 1,
+        },
+
+        899: {
+            slidesPerView: 2,
+        },
+
+        1399: {
+            slidesPerView: 3,
+        },
+
+    }
+});
+
+// About
+$(document).ready(function () {
+    $("#phone").mask("8(999)999-99-99", {
+    autoclear: false
+});
 });
 
 // Footer
