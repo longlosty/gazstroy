@@ -174,7 +174,7 @@
     line-height: 16.94px / 14px * 100%;
     display: flex;
     justify-content: space-between;
-    padding-bottom: 17px;
+    margin-bottom: 17px;
     margin-top: 25px;
 
     @media (max-width: 699px) {
@@ -184,7 +184,7 @@
     @media (max-width: 499px) {
         margin-top: 29px;
         flex-direction: column;
-        padding-bottom: 23px;
+        margin-bottom: 23px;
     }
 
     a {

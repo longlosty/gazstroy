@@ -19,10 +19,10 @@
 
 .contacts__content {
     color: $white;
-    padding: 55px 0 59px 58px;
+    margin: 55px 0 59px 58px;
 
     @media (max-width: 1199px) {
-        padding: 30px 0 35px 25px;
+        margin: 30px 0 35px 25px;
     }
 
     @media (max-width: 899px) {
@@ -31,7 +31,7 @@
 
     @media (max-width: 599px) {
         font-size: 16px;
-        padding: 46px 36px 66px 23px;
+        margin: 46px 36px 66px 23px;
     }
 
     .contacts__content--item {

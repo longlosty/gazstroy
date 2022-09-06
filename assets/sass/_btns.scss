@@ -1,6 +1,5 @@
 @import "./vars";
-
-// Intro
+//Intro
 .btn {
     background-color: transparent;
     color: $dark;
@@ -35,6 +34,18 @@
     }
 }
 
+//Header
+.empty--button {
+    background-color: $dark;
+    color: $white;
+
+    &:hover {
+        color: $dark;
+        background-color: $white;
+        border: 1px solid $dark;
+    }
+}
+
 //Catalog
 .catalog--button {
     @media(max-width: 499px) {
@@ -64,6 +75,11 @@
         color: $dark;
         border: 2px solid $dark;
     }
+}
+
+//News
+.news--button {
+    max-height: 55px;
 }
 
 //Contacts 

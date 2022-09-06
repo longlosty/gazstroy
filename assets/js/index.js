@@ -46,11 +46,11 @@ new Swiper (".partnersSwiper", {
 // News slider
 new Swiper(".newsSwiper", {
     loop: true,
-    slidesPerView: 3,
+    slidesPerView: 1,
 
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".news__nav--next",
+        prevEl: ".news__nav--prev",
     },
 
     breakpoints: {
@@ -68,6 +68,18 @@ new Swiper(".newsSwiper", {
 
     }
 });
+
+
+new Swiper(".newsSwiperMbl", {
+    loop: true,
+    slidesPerView: 1,
+
+    navigation: {
+        nextEl: ".news__nav--next--mbl",
+        prevEl: ".news__nav--prev--mbl",
+    },
+});
+
 
 // About
 $(document).ready(function () {
