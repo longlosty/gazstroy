@@ -99,10 +99,10 @@
         height: 3px;
         border-radius: 0;
     }
-
     .swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
         height: 3px;
         top: 168px;
+        z-index: 10 !important;
 
         @media (max-width: 799px) {
             top: 144px;

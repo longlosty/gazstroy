@@ -781,6 +781,7 @@ body {
 .partners__slider .swiper-horizontal > .swiper-scrollbar, .partners__slider .swiper-scrollbar.swiper-scrollbar-horizontal {
   height: 3px;
   top: 168px;
+  z-index: 10 !important;
 }
 @media (max-width: 799px) {
   .partners__slider .swiper-horizontal > .swiper-scrollbar, .partners__slider .swiper-scrollbar.swiper-scrollbar-horizontal {
