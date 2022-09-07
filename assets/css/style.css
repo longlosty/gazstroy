@@ -119,6 +119,7 @@ body {
 .item--button {
   color: #FFFFFF;
   background-color: #00233E;
+  border: 1px solid #00233E;
 }
 .item--button:hover {
   background-color: #FFFFFF;
@@ -172,6 +173,26 @@ body {
     margin-right: 0;
     margin-bottom: 10px;
   }
+}
+@media (max-width: 599px) {
+  .contacts--phone {
+    margin-bottom: 28px;
+  }
+}
+.contacts--phone.error {
+  border: 1px solid #FF0000;
+}
+.contacts--phone.error::-moz-placeholder {
+  color: #FF0000;
+}
+.contacts--phone.error:-ms-input-placeholder {
+  color: #FF0000;
+}
+.contacts--phone.error::placeholder {
+  color: #FF0000;
+}
+.contacts--phone:active {
+  border: 1px solid #CACACA;
 }
 
 @media (max-width: 799px) {
@@ -287,11 +308,6 @@ body {
   }
 }
 
-.menu.active {
-  right: 0;
-  z-index: 15;
-}
-
 .menu__list {
   display: flex;
 }
@@ -317,8 +333,21 @@ body {
   }
 }
 
-.menu.active .menu__list li:first-child {
-  padding: 0 0 0 35px;
+.menu.active {
+  right: 0;
+  z-index: 15;
+}
+.menu.active .menu__list li {
+  padding-left: unset;
+}
+.menu.active .menu__list .hasDropdown {
+  padding-bottom: unset;
+}
+.menu.active .cart__popup {
+  display: none;
+}
+.menu.active .menu__link {
+  font-weight: 500;
 }
 
 .menu__link {
@@ -379,7 +408,8 @@ body {
     background: none;
     border: 0;
     box-shadow: none;
-    padding-top: 17px;
+    padding-top: 29px;
+    width: unset;
   }
 }
 .dropdown .dropdown__item {
@@ -391,8 +421,8 @@ body {
 @media (max-width: 1049px) {
   .dropdown .dropdown__item {
     border: 0;
-    padding: 15px;
-    margin: 0;
+    padding: unset;
+    margin-bottom: 31px;
   }
 }
 .dropdown .dropdown__item a {
@@ -403,6 +433,9 @@ body {
 @media (max-width: 1049px) {
   .dropdown .dropdown__item a {
     color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
   }
 }
 .dropdown .dropdown__item:hover {
@@ -443,6 +476,11 @@ body {
 }
 .menu__catalog span {
   padding-right: 9px;
+}
+@media (max-width: 1049px) {
+  .menu__catalog span {
+    padding-right: 8px;
+  }
 }
 
 .menu__mbl {
@@ -534,12 +572,8 @@ body {
 }
 
 .cart {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-left: 57px;
   position: relative;
-  cursor: pointer;
   padding-bottom: 10px;
 }
 @media (max-width: 1049px) {
@@ -576,6 +610,12 @@ body {
   opacity: 1;
   visibility: visible;
   pointer-events: unset;
+}
+.cart a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
 
 .cart__empty {
@@ -807,11 +847,12 @@ body {
 .catalog__intro {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 46px;
 }
 @media (max-width: 499px) {
   .catalog__intro {
-    margin-bottom: 16px;
+    margin-bottom: 11px;
   }
 }
 
@@ -823,6 +864,8 @@ body {
 @media (max-width: 767px) {
   .catalog__content {
     justify-content: center;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
   }
 }
 .catalog__content .catalog__content--item {
@@ -1000,7 +1043,7 @@ body {
 }
 @media (max-width: 799px) {
   .about__content {
-    width: 100%;
+    width: 100vw;
   }
 }
 @media (max-width: 499px) {
@@ -1383,12 +1426,17 @@ body {
 }
 @media (max-width: 1199px) {
   .contacts__content {
-    margin: 30px 0 35px 25px;
+    margin: 30px 5px 35px 25px;
   }
 }
 @media (max-width: 899px) {
   .contacts__content {
     font-size: 14px;
+  }
+}
+@media (max-width: 799px) {
+  .contacts__content {
+    margin-right: 20px;
   }
 }
 @media (max-width: 599px) {
@@ -1408,6 +1456,11 @@ body {
 }
 .contacts__content .contacts__content--item:last-child {
   margin-bottom: 0;
+}
+@media (max-width: 399px) {
+  .contacts__content .contacts__content--item:last-child .contacts__content--text {
+    width: 60%;
+  }
 }
 .contacts__content .contacts__content--item .contacts__content--text {
   line-height: 118.75%;
@@ -1486,7 +1539,7 @@ body {
 }
 @media (max-width: 599px) {
   .contacts__question .contacts__call {
-    margin-bottom: 20px;
+    margin-bottom: unset;
   }
 }
 .contacts__question .confidency {
@@ -1516,6 +1569,16 @@ body {
     margin: 22px 25px 20px 31px;
     max-width: unset;
   }
+}
+@media (min-width: 399px) and (max-width: 599px) {
+  .contacts__question .confidency {
+    text-align: center;
+  }
+}
+.contacts__question .confidency a {
+  text-decoration: none;
+  color: inherit;
+  position: relative;
 }
 
 /* Colors */

@@ -44,7 +44,6 @@ new Swiper (".partnersSwiper", {
 });
 
 // News slider
-
 let newsWidth = $('.news').width();
 if (newsWidth > 499) {
 new Swiper(".newsSwiper", {
@@ -85,7 +84,7 @@ new Swiper(".newsSwiper", {
 
 // About
 $(document).ready(function () {
-    $("#phone").mask("8(999)999-99-99", {
+    $("#phone").mask("+7 (999)999-99-99", {
     autoclear: false
 });
 });
@@ -100,8 +99,3 @@ function up() {
 	} else clearTimeout(t);
 	return false;
 }
-
-
-
-
-

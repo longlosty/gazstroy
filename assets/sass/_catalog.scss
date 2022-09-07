@@ -11,10 +11,11 @@
 .catalog__intro {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 46px;
 
     @media (max-width: 499px) {
-        margin-bottom: 16px;
+        margin-bottom: 11px;
     }
 }
 
@@ -25,6 +26,8 @@
 
     @media (max-width: 767px) {
         justify-content: center;
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
     }
 
     .catalog__content--item {

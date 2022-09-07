@@ -22,11 +22,15 @@
     margin: 55px 0 59px 58px;
 
     @media (max-width: 1199px) {
-        margin: 30px 0 35px 25px;
+        margin: 30px 5px 35px 25px;
     }
 
     @media (max-width: 899px) {
         font-size: 14px;
+    }
+
+    @media (max-width: 799px) {
+        margin-right: 20px;
     }
 
     @media (max-width: 599px) {
@@ -44,6 +48,12 @@
 
         &:last-child {
             margin-bottom: 0;
+
+            .contacts__content--text {
+                @media (max-width: 399px) {
+                    width: 60%;
+                }
+            }
         }
         
         .contacts__content--text {
@@ -117,7 +127,7 @@
         }
 
         @media (max-width: 599px) {
-            margin-bottom: 20px;
+            margin-bottom: unset
         }
     }
 
@@ -143,6 +153,16 @@
         @media (max-width: 599px) {
             margin: 22px 25px 20px 31px;
             max-width: unset;
+        }
+
+        @media (min-width: 399px) and (max-width: 599px) {
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            position: relative;
         }
     }
 }

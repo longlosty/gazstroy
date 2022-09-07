@@ -57,6 +57,7 @@
 .item--button {
     color: $white;
     background-color: $dark;
+    border: 1px solid $dark;
 
     &:hover {
         background-color: $white;
@@ -103,6 +104,22 @@
         width: 229px;
         margin-right: 0;
         margin-bottom: 10px;
+    }
+
+    @media (max-width: 599px) {
+        margin-bottom: 28px;
+    }
+
+    &.error {
+        border: 1px solid $error;
+
+        &::placeholder {
+            color: $error;
+        }
+    }
+
+    &:active {
+        border: 1px solid $active;
     }
 }
 
