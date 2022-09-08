@@ -24,27 +24,6 @@
         padding-top: 155px;
     }
 
-    .intro__info--title {
-        font-family: 'Ubuntu', sans-serif;
-        font-size: 40px;
-        font-weight: 500;
-        line-height: 42px / 40px * 100%;
-        text-transform: uppercase;
-        margin-bottom: 20px;
-
-        @media (max-width: 799px) {
-            font-size: 35px;
-        }
-
-        @media (max-width: 699px) {
-            font-size: 30px;
-        }
-
-        @media (max-width: 399px) {
-            font-size: 25px;
-        }
-    }
-
     .intro__info--subtitle {
         font-size: 20px;
         line-height: 24px / 20px * 100%;

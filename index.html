@@ -128,7 +128,7 @@
     <section class="intro">
         <div class="container">
             <div class="intro__info">
-                <h1 class="intro__info--title">комплексные поставки <br> газового оборудования</h1>
+                <h1>комплексные поставки <br> газового оборудования</h1>
                 <p class="intro__info--subtitle">подзаголовок из нескольких строчек для краткого описания</p>
                 <div class="intro__info--button">
                     <button type="button" class="btn--solid">Подробнее</button>
@@ -142,7 +142,7 @@
             <div class="partners__inner">
                 <div class="partners_bg"></div>
                 <div class="partners__info">
-                    <h2 class="partners__info--title sectionTitle">Наши партнёры</h2>
+                    <h2 class="partners__info--title">Наши партнёры</h2>
                     <p class="partners__info--text">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке</p>
                 </div>
 
@@ -172,12 +172,13 @@
     <section class="catalog">
         <div class="container">
             <div class="catalog__intro">
-                <h2 class="sectionTitle">каталог</h2>
+                <h2>каталог</h2>
                 <button type="button" class="btn catalog--button">Смотреть все товары</button>
             </div>
             
             <div class="catalog__content">
                 <div class="catalog__content--item">
+                    <img src="assets/template/images/catalog/catalogFull.png" alt="" class="item--bg">
                     <div class="item__info">
                         <div class="item__title">ГАЗОРЕГУЛЯТОРНЫЕ ПУНКТЫ</div>
                         <button type="button" class="btn--solid item--button">Подробнее</button>
@@ -188,6 +189,7 @@
                 </div>
 
                 <div class="catalog__content--item">
+                    <img src="assets/template/images/catalog/catalogFull.png" alt="" class="item--bg">
                     <div class="item__info">
                         <div class="item__title">РЕГУЛЯТОРЫ ДАВЛЕНИЯ ГАЗА</div>
                         <button type="button" class="btn--solid item--button">Подробнее</button>
@@ -198,6 +200,7 @@
                 </div>
 
                 <div class="catalog__content--item">
+                    <img src="assets/template/images/catalog/catalogFull.png" alt="" class="item--bg">
                     <div class="item__info">
                         <div class="item__title">ФИЛЬТРЫ ГАЗОВЫЕ</div>
                         <button type="button" class="btn--solid item--button">Подробнее</button>
@@ -208,6 +211,7 @@
                 </div>
 
                 <div class="catalog__content--item">
+                    <img src="assets/template/images/catalog/catalogFull.png" alt="" class="item--bg">
                     <div class="item__info">
                         <div class="item__title">ФИЛЬТРЫ СЕТЧАТЫЕ</div>
                         <button type="button" class="btn--solid item--button">Подробнее</button>
@@ -223,7 +227,7 @@
         <div class="container">
             <div class="about__inner">
                 <div class="about__info">
-                    <h2 class="sectionTitle">о компании</h2>
+                    <h2>о компании</h2>
                     <p class="about__info--text">ООО «ПКФ «Газстрой» была создана в 2004 году
                     и за все время работы заняла прочную лидерскую позицию на рынке, 
                     а также заслужила репутацию надежного партнера. 
@@ -232,6 +236,9 @@
                     <button type="button" class="btn--solid about--button">Подробнее</button>
                 </div>
                 <div class="about__content">
+                    <div class="about__content--bg">
+                        <img src="assets/template/images/about/about-block.png" alt="" srcset="">
+                    </div>
                     <div class="about__content--info">
                         <div class="about__content--years">
                             <span class='numscroller' data-min='1' data-max='18' data-delay='1.5' data-increment='1'>0</span>
@@ -316,6 +323,115 @@
             </div>
         </div>
     </section>
+
+    <!-- <div class="news">
+        <div class="slider">
+            <div class="right">
+                    
+                    <div class="swiper slider-items">
+                        <div class="swiper-wrapper">
+                            <div class="slide swiper-slide">Slide 1</div>
+                            <div class="slide swiper-slide">Slide 2</div>
+                            <div class="slide swiper-slide">Slide 3</div>
+                        </div>
+                </div>
+                    
+                    <div class="swiper-pagination">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    
+                </div>
+            
+                <div class="slider-dots"></div>
+        </div>
+
+    <style>
+        .right {
+            width: 50%;
+            height: 100%;
+            overflow: hidden;
+            display: inline-block;
+            position: relative;
+        }
+
+        .slider-items {
+            width: 100%;
+            height: 100%;
+        }
+
+        .slider-dots {
+            width: 50% !important;
+            height: 100%;
+            display: inline-block;
+            border: 1px solid red;
+        }
+
+        .slide {
+            text-align: center;
+            font-size: 18px;
+            background: #ccc;
+            width: 100%;
+            height: 100%;
+        }
+
+
+        .swiper-pagination {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 150px;
+            height: 50px;
+            border: 1px solid pink;
+        } 
+
+
+        .swiper-pagination-bullet {
+            padding: 5px 10px;
+            border-radius: 0;
+            width: auto;
+            height: 30px;
+            text-align: center;
+            color:#000;
+            opacity: 1;
+            background: rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: 300ms ease;
+        }
+
+        .swiper-pagination-bullet-active {
+            color:#fff;
+            background: #007aff;
+        }
+
+
+        .block {
+            width: 33%;
+            height: 100%;
+        }
+    </style>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var menu = ['Slide 1', 'Slide 2', 'Slide 3']
+
+        var mySwiper = new Swiper ('.slider-items', {
+                    pagination: {
+                    el: '.slider-dots',
+                    clickable: true,
+                    renderBullet: function (index, className) {
+                    return `<div class="block ${className}">${menu[index]}</div>`;
+                    }
+                    },
+                    navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                    },
+        })
+
+        console.log(mySwiper)
+    </script>
+    </div> -->
 
     <!-- <section class="news">
         <div class="news_slider">
