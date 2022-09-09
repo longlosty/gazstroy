@@ -2,9 +2,26 @@
 
 .page__header {
     position: absolute;
-    top: 29px;
+    padding-top: 29px;
     left: 0;
     right: 0;
+    transition: all .2s linear;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        height: 100%;
+        background-color: transparent;
+        width: 100%;
+        z-index: 20;
+    }
+
+    &.active {
+        &::before {
+            background-color: $dark;
+        }
+    }
 }
 
 .header__inner {
@@ -256,6 +273,7 @@
 
 .menu__mbl {
     display: none;
+    z-index: 20;
 
     @media (max-width: 1049px) {
     display: block;
