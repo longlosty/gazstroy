@@ -3,12 +3,14 @@ const burger = document.querySelector('.menu__mbl');
 const menu = document.querySelector('.menu');
 const body = document.querySelector('body');
 const header = document.querySelector('.page__header');
+const headerInner = document.querySelector('.header__inner');
 
 burger.addEventListener("click", function() {
     burger.classList.toggle('active');
     menu.classList.toggle('active');
     body.classList.toggle('lock');
     header.classList.toggle('active');
+    headerInner.classList.toggle('hide');
     
 })
 
@@ -84,6 +86,26 @@ new Swiper (".partnersSwiper", {
 //         },
 //     });
 // }
+
+
+var newsMenu = ['Slide 1', 'Slide 2', 'Slide 3']
+
+var mySwiper = new Swiper ('.newsSwiper', {
+			pagination: {
+                el: '.slider-dots',
+                spaceBetween: 0,
+                clickable: true,
+                renderBullet: function (index, className) {
+                return `<div class="block ${className}">${newsMenu[index]}</div>`;
+                }
+			},
+			navigation: {
+			nextEl: '.news__nav--next',
+			prevEl: '.news__nav--prev',
+			},
+  })
+
+console.log(mySwiper)
 
 // About
 $(document).ready(function () {

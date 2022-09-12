@@ -324,115 +324,6 @@
         </div>
     </section> -->
 
-    <!-- <div class="news">
-        <div class="slider">
-            <div class="right">
-                    
-                    <div class="swiper slider-items">
-                        <div class="swiper-wrapper">
-                            <div class="slide swiper-slide">Slide 1</div>
-                            <div class="slide swiper-slide">Slide 2</div>
-                            <div class="slide swiper-slide">Slide 3</div>
-                        </div>
-                </div>
-                    
-                    <div class="swiper-pagination">
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-                    </div>
-                    
-                </div>
-            
-                <div class="slider-dots"></div>
-        </div>
-
-    <style>
-        .right {
-            width: 50%;
-            height: 100%;
-            overflow: hidden;
-            display: inline-block;
-            position: relative;
-        }
-
-        .slider-items {
-            width: 100%;
-            height: 100%;
-        }
-
-        .slider-dots {
-            width: 50% !important;
-            height: 100%;
-            display: inline-block;
-            border: 1px solid red;
-        }
-
-        .slide {
-            text-align: center;
-            font-size: 18px;
-            background: #ccc;
-            width: 100%;
-            height: 100%;
-        }
-
-
-        .swiper-pagination {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 150px;
-            height: 50px;
-            border: 1px solid pink;
-        } 
-
-
-        .swiper-pagination-bullet {
-            padding: 5px 10px;
-            border-radius: 0;
-            width: auto;
-            height: 30px;
-            text-align: center;
-            color:#000;
-            opacity: 1;
-            background: rgba(0,0,0,0.2);
-            cursor: pointer;
-            transition: 300ms ease;
-        }
-
-        .swiper-pagination-bullet-active {
-            color:#fff;
-            background: #007aff;
-        }
-
-
-        .block {
-            width: 33%;
-            height: 100%;
-        }
-    </style>
-    
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script>
-        var menu = ['Slide 1', 'Slide 2', 'Slide 3']
-
-        var mySwiper = new Swiper ('.slider-items', {
-                    pagination: {
-                    el: '.slider-dots',
-                    clickable: true,
-                    renderBullet: function (index, className) {
-                    return `<div class="block ${className}">${menu[index]}</div>`;
-                    }
-                    },
-                    navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                    },
-        })
-
-        console.log(mySwiper)
-    </script>
-    </div> -->
-
     <!-- <section class="news">
         <div class="news_slider">
             <div class="swiper newsSwiper">
@@ -483,6 +374,63 @@
             </div>
         </div>
     </section> -->
+
+
+    <section class="news">
+        <div class="news__slider">
+            <div class="news__info">
+                    
+                    <div class="swiper newsSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="slide swiper-slide">
+                                <div class="news__content">
+                                    <div class="news__title">Активно помогаем проектным организациям</div>
+                                    <div class="news__text">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке.</div>
+                                    <a href="" class="btn--solid news__link">Подробнее</a>
+                                </div>
+                                <img src="assets/template/images/news/news1.png" alt="" class="news__bg">
+                            </div>
+                            <div class="slide swiper-slide">
+                                <div class="news__content">
+                                    <div class="news__title">новость 2</div>
+                                    <div class="news__text">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке.</div>
+                                    <a href="" class="btn--solid news__link">Подробнее</a>
+                                </div>
+                                <img src="assets/template/images/news/news2.png" alt="" class="news__bg">
+                            </div>
+                            <div class="slide swiper-slide">
+                                <div class="news__content">
+                                    <div class="news__title">новость 3</div>
+                                    <div class="news__text">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке.</div>
+                                    <a href="" class="btn--solid news__link">Подробнее</a>
+                                </div>
+                                <img src="assets/template/images/news/news3.png" alt="" class="news__bg">
+                            </div>
+                            <div class="slide swiper-slide">
+                                <div class="news__content">
+                                    <div class="news__title">новость 4</div>
+                                    <div class="news__text">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке.</div>
+                                    <a href="" class="btn--solid news__link">Подробнее</a>
+                                </div>
+                                <img src="assets/template/images/news/news4.png" alt="" class="news__bg">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="news__nav">
+                        <div class="news__nav--prev">
+                            <img src="assets/template/svg/news/news__arr--left.svg" alt="" srcset="">
+                        </div>
+                        <div class="news__nav--next">
+                            <img src="assets/template/svg/news/news__arr--right.svg" alt="" srcset="">
+                        </div>
+                    </div>
+                    
+                </div>
+            
+                <div class="slider-dots"></div>
+        </div>
+    </section>
 
     <section class="map">
         <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af8f63bf93af95f55d9f7e0f5c4de03c296e090c562ab6bd392ecb021f5a729eb&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=true"></script>
