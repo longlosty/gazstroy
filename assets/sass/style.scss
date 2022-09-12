@@ -1,7 +1,8 @@
-@import "./fonts";
-@import "./reset";
-@import "./vars";
-@import "./btns";
+// Base
+@import "./base/fonts";
+@import "./base/reset";
+@import "./base/vars";
+@import "./base/btns";
 
 // Template
 .template {
@@ -63,13 +64,25 @@ h2 {
     }
 }
 
-@import "./header";
-@import "./intro";
-@import "./partners";
-@import "./catalog";
-@import "./about";
-@import "./news";
+// Header
+@import "./global/header";
 
+// Intro
+@import "./index/intro";
+
+// Partners
+@import "./index/partners";
+
+// Catalog
+@import "./index/catalog";
+
+// About
+@import "./index/about";
+
+// News
+@import "./index/news";
+
+// Map
 .map {
     margin-top: 67px;
     height: 436px;
@@ -80,5 +93,9 @@ h2 {
     }
 }
 
-@import "./contacts";
-@import "./footer";
+
+// Contacts
+@import "./index/contacts";
+
+// Footer
+@import "./global/footer";
