@@ -67,7 +67,7 @@
     position: absolute;
     z-index: -1;
     opacity: 0;
-    transition: all 0.1s ease;
+    transition: all 0.4s ease;
 }
 
 .catalog__content--item:hover {
@@ -152,6 +152,7 @@
     opacity: 1;
     position: absolute;
     right: 28px;
+    transition: 250ms ease;
 
     @media (max-width: 799px) {
         top: 70px;
