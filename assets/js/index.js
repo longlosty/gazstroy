@@ -54,7 +54,6 @@ const newsGalary = document.querySelectorAll('#news-galary .slide')
 const result = ([...newsGalary]).map(el => ({
     title: el.querySelector('.news__title').innerText,
     text: el.querySelector('.news__text').innerText,
-    img: el.querySelector('.news__bg').src
 }))
 
 const track = document.querySelector('.slider-dots-track')
@@ -70,7 +69,6 @@ var mySwiper = new Swiper('.newsSwiper', {
                 <div class = "news__inner">
                     <div class="news__inner--title">${result[index].title}</div>
                     <div class="news__inner--text">${result[index].text}</div>
-                    <img src = ${result[index].img} class = "news__inner--bg" />
                 </div>
             </div>`;
         }

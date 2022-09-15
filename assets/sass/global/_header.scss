@@ -24,6 +24,31 @@
     }
 }
 
+.global__header {
+    position: relative;
+    padding-top: 29px;
+    padding-bottom: 44px;
+    left: 0;
+    right: 0;
+    transition: all .2s linear;
+    
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        height: 100%;
+        background-color: $dark;
+        width: 100%;
+        z-index: 20;
+    }
+
+    &.active {
+        &::before {
+            background-color: $dark;
+        }
+    }
+}
+
 .header__inner {
     display: flex;
     justify-content: space-between;

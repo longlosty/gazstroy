@@ -222,9 +222,8 @@ h1 {
   font-family: "Ubuntu", sans-serif;
   font-size: 40px;
   font-weight: 500;
-  line-height: 105%;
+  line-height: 130%;
   text-transform: uppercase;
-  margin-bottom: 20px;
 }
 @media (max-width: 799px) {
   h1 {
@@ -265,6 +264,23 @@ h2 {
   }
 }
 
+h3 {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 106.4%;
+  color: #111;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 22px;
+  line-height: 159%;
+  font-weight: 400;
+  color: #111;
+}
+
 /* Colors */
 .page__header {
   position: absolute;
@@ -283,6 +299,27 @@ h2 {
   z-index: 20;
 }
 .page__header.active::before {
+  background-color: #00233E;
+}
+
+.global__header {
+  position: relative;
+  padding-top: 29px;
+  padding-bottom: 44px;
+  left: 0;
+  right: 0;
+  transition: all 0.2s linear;
+}
+.global__header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background-color: #00233E;
+  width: 100%;
+  z-index: 20;
+}
+.global__header.active::before {
   background-color: #00233E;
 }
 
@@ -713,6 +750,10 @@ h2 {
   .intro__info {
     padding-top: 155px;
   }
+}
+.intro__info h1 {
+  line-height: 105%;
+  margin-bottom: 20px;
 }
 .intro__info .intro__info--subtitle {
   font-size: 20px;
@@ -1907,4 +1948,80 @@ h2 {
   .copyright .copyright__copy {
     margin-top: 13px;
   }
+}
+
+/* Colors */
+.textpage {
+  padding-top: 96px;
+}
+.textpage .intro_text {
+  margin-top: 22px;
+  line-height: 160%;
+  color: #111;
+}
+.textpage .intro_imgs {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 28px;
+}
+
+.contrast_info {
+  margin-top: 50px;
+  display: flex;
+  position: relative;
+}
+.contrast_info .contrast_inner {
+  display: flex;
+}
+
+.contrast_content {
+  color: #FFFFFF;
+}
+.contrast_content .content_inner {
+  margin-top: 57px;
+  margin-right: 42px;
+  max-width: 441px;
+}
+.contrast_content .content_inner .contrast_text {
+  margin-top: 28px;
+  line-height: 160%;
+}
+.contrast_content .contrast_bg {
+  position: absolute;
+  background-color: #00233E;
+  height: 350px;
+  width: 43.9%;
+  left: 0;
+  z-index: -1;
+}
+
+.middle_info {
+  margin-top: 60px;
+}
+.middle_info .middle_text {
+  margin-top: 28px;
+  color: #111;
+  line-height: 160%;
+  max-width: 995px;
+}
+.middle_info .middle_text li {
+  margin-top: 5px;
+  margin-left: 15px;
+}
+
+.submiddle {
+  margin-top: 50px;
+}
+.submiddle .submiddle_inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.submiddle .submiddle_content {
+  color: #111;
+  max-width: 614px;
+  line-height: 160%;
+}
+.submiddle .submiddle_content span {
+  color: #00233E;
 }/*# sourceMappingURL=style.css.map */
