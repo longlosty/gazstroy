@@ -31,6 +31,10 @@
     left: 0;
     right: 0;
     transition: all .2s linear;
+
+    @media (max-width: 1049px) {
+        padding-bottom: 24px;
+    }
     
     &::before {
         content: "";
@@ -432,8 +436,8 @@
         visibility: hidden;
         transition: opacity 0.8s ease;
 
-        @media (max-width: 1399px) {
-            right: 0;
+        @media (max-width: 1599px) {
+            left: -153px;
         }
     }
 

@@ -9,6 +9,10 @@
     position: relative;
     max-width: 1920px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .lock {
@@ -70,6 +74,10 @@ h3 {
     line-height: 106.4%;
     color: #111;
     text-transform: uppercase;
+
+    @media (max-width: 399px) {
+        font-size: 20px;
+    }
 }
 
 h4 {
@@ -77,6 +85,18 @@ h4 {
     font-size: 22px;
     line-height: 159%;
     font-weight: 400;
+    color: #111;
+
+    @media (max-width: 399px) {
+        font-size: 20px;
+    }
+}
+
+h5 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    text-transform: uppercase;
     color: #111;
 }
 
@@ -119,3 +139,15 @@ h4 {
 
 // Text Page
 @import "./text_page/textpage";
+
+// Contact page
+@import "./contact_page/contactpage";
+
+// Catalog page
+@import "./catalog_page/catalog";
+
+// Error pages
+@import "./error_pages/error";
+
+// Goods pages
+@import "./goods_pages/goods";

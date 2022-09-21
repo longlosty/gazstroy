@@ -58,7 +58,7 @@ const result = ([...newsGalary]).map(el => ({
 
 const track = document.querySelector('.slider-dots-track')
 
-var mySwiper = new Swiper('.newsSwiper', {
+let mySwiper = new Swiper('.newsSwiper', {
     pagination: {
         el: track,
         spaceBetween: 0,
@@ -79,12 +79,23 @@ var mySwiper = new Swiper('.newsSwiper', {
     },
 })
 
+let slides = track.childNodes;
+let nextSlide = slides[1];
+track.style.left = -nextSlide.offsetLeft + 'px';
+
+const newsPrev = document.querySelector('.news__nav--prev');
+const newsNext = document.querySelector('.news__nav--next');
+
+slides.forEach(function(item, i, arr) {
+    let slide = i;
+}); 
+
 const dotsUpdated = () => {
-    let curr = document.querySelector('.swiper-pagination-bullet-active')
-    track.style.left = -curr.offsetLeft + 'px'
+    let curr = document.querySelector('.swiper-pagination-bullet-active');
+    track.style.left = -curr.offsetLeft + 'px';
 }
 
-mySwiper.eventsListeners.paginationUpdate.push(dotsUpdated)
+mySwiper.eventsListeners.paginationUpdate.push(dotsUpdated);
 
 // About
 $(document).ready(function () {
