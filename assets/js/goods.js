@@ -36,6 +36,7 @@ function up() {
 
 
 // Sortings
+const sortingBtn = document.querySelectorAll('.sortingBtn');
 
 const goods = document.querySelector('.goods_items');
 
@@ -43,39 +44,75 @@ function insertAfter(elem, refElem) {
     return refElem.parentNode.insertBefore(elem, refElem.nextSibling);
 }
 
-
-
-const rateSort = document.querySelector('#rateSort');
-
-function rateSorting() {
+function ascendingSort(sortType) {
     for (let i = 0; i < goods.children.length; i++) {
         for (let j = i; j < goods.children.length; j++) {
-            if (+goods.children[i].getAttribute('data-rating') < +goods.children[j].getAttribute('data-rating')) {
+            if (+goods.children[i].getAttribute(sortType) > +goods.children[j].getAttribute(sortType)) {
                 replacedNode = goods.replaceChild(goods.children[j], goods.children[i]);
                 insertAfter(replacedNode, goods.children[i]);
             }
         }
     }
-
-    rateSort.style.color = "#111";
 }
 
-rateSort.addEventListener('click', rateSorting);
+function descdendingSort(sortType) {
+    for (let i = 0; i < goods.children.length; i++) {
+        for (let j = i; j < goods.children.length; j++) {
+            if (+goods.children[i].getAttribute(sortType) < +goods.children[j].getAttribute(sortType)) {
+                replacedNode = goods.replaceChild(goods.children[j], goods.children[i]);
+                insertAfter(replacedNode, goods.children[i]);
+            }
+        }
+    }
+}
+
+
+const rateSort = document.querySelector('#rateSort');
+
+rateSort.addEventListener('click', () => {
+    sortingBtn.forEach(el => el.style.color = "inherit");
+
+    rateSort.style.color = "#111";
+    descdendingSort('data-rating');
+});
 
 
 const priceSort = document.querySelector('#priceSort');
 
-function priceSorting() {
-    
-}
+priceSort.addEventListener('click', () => {
+    sortingBtn.forEach(el => el.style.color = "inherit");
+
+    priceSort.style.color = "#111";
+    descdendingSort('data-price');
+
+})
+
 
 const nameSort = document.querySelector('#nameSort');
 
+nameSort.addEventListener('click', () => {
+    sortingBtn.forEach(el => el.style.color = "inherit");
+
+    nameSort.style.color = "#111";
+    
+    for (let i = 0; i < goods.children.length; i++) {
+        for (let j = i; j < goods.children.length; j++) {
+            if (goods.children[i].getAttribute('data-name') > goods.children[j].getAttribute('data-name')) {
+                replacedNode = goods.replaceChild(goods.children[j], goods.children[i]);
+                insertAfter(replacedNode, goods.children[i]);
+            }
+        }
+    }
+})
+
 const isNewSort = document.querySelector('#isNewSort');
 
+isNewSort.addEventListener('click', () => {
+    sortingBtn.forEach(el => el.style.color = "inherit");
 
-
-
+    isNewSort.style.color = "#111";
+    descdendingSort('data-new');
+})
 
 
 // Show more

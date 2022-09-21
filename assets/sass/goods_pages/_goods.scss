@@ -29,6 +29,10 @@
 .goods_content {
     margin-top: 42px;
 
+    @media (max-width: 699px) {
+        margin-top: 25px;
+    }
+
     span {
         line-height: 233%;
         font-weight: 500;
@@ -36,6 +40,8 @@
     }
 
     .goods_sort {
+        color: $sort;
+
         button {
             font-weight: 500;
             line-height: 233%;
@@ -45,6 +51,7 @@
             padding: 0;
             transition: color .3s ease;
             padding-left: 13px;
+            background: none;
     
             &:hover {
                 color: #111;
@@ -97,13 +104,25 @@
     margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
+
+    @media (max-width: 1299px) {
+        justify-content: center;
+    }
 }
 
 .goods_item {
     margin-bottom: 30px;
     margin-right: 12px;
-    width: 24%;
+    width: 286px;
     border: 1px solid $goodsborder; 
+
+    @media (max-width: 1299px) {
+        margin-right: 20px;
+    }
+
+    @media (max-width: 599px) {
+        margin-right: 0;
+    }
 }
 
 .goods_item--inner {
