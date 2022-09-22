@@ -115,6 +115,7 @@
     margin-right: 12px;
     width: 286px;
     border: 1px solid $goodsborder; 
+    user-select: none;
 
     @media (max-width: 1299px) {
         margin-right: 20px;

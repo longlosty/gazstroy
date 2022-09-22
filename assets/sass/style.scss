@@ -152,3 +152,41 @@ h5 {
 // Goods pages
 @import "./goods_pages/goods";
 @import "./goods_pages/product";
+
+// Stepper
+
+.stepper {
+    display: flex;
+    height: 55px;
+    width: fit-content;
+    border: 1px solid $stepperborder;
+
+    user-select: none;
+
+    input {
+        width: 7.4ex;
+        border: none;
+        text-align: center;
+        border-left: 1px solid $stepperborder;
+        border-right: 1px solid $stepperborder;
+    }
+
+    input[type="text"] {
+        padding: 0;
+    }
+
+    button {
+        border: none;
+        width: 33px;
+        background-color: transparent;
+        transition: background-color .2s linear;
+        
+        &:hover {
+            background-color: $light;
+        }
+
+        &.disabled {
+            pointer-events: none;
+        }
+    }
+}

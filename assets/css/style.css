@@ -2972,6 +2972,10 @@ h5 {
   margin-right: 12px;
   width: 286px;
   border: 1px solid #D7D7D7;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 @media (max-width: 1299px) {
   .goods_item {
@@ -3053,6 +3057,13 @@ h5 {
     padding-top: 40px;
   }
 }
+.product_page .contacts {
+  margin-top: 15px;
+  position: unset;
+}
+.product_page .contacts__inner {
+  position: unset;
+}
 
 .product_info {
   display: flex;
@@ -3096,4 +3107,170 @@ h5 {
 }
 .product_nav .prev_product svg {
   margin-right: 12px;
+}
+
+.product_content {
+  margin-top: 40px;
+}
+
+.product_preview {
+  display: flex;
+}
+
+.preview_image {
+  border: 1px solid #D7D7D7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40.25%;
+  margin-right: 102px;
+}
+.preview_image img {
+  max-width: 100%;
+  padding: 25px;
+}
+
+.preview_info {
+  line-height: 233%;
+  color: #111;
+}
+.preview_info .price {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 150%;
+  margin-top: 6px;
+}
+.preview_info .stepper {
+  margin-top: 15px;
+}
+.preview_info .small_description {
+  margin-top: 29px;
+}
+.preview_info .small_description span {
+  margin-left: 15px;
+}
+.preview_info .small_description p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 13px;
+}
+
+.product_description {
+  margin-top: 36px;
+}
+
+.product_tablist {
+  display: flex;
+  border-bottom: 1px solid #606060;
+}
+
+.product_tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab-btn {
+  border: none;
+  background-color: transparent;
+  line-height: 233%;
+  padding: 10px 25px;
+  margin-right: 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.tab-btn--active {
+  background-color: #F3F3F3;
+  pointer-events: none;
+}
+
+.tab_content {
+  margin-top: 30px;
+  display: none;
+}
+.tab_content p {
+  color: #111;
+  line-height: 150%;
+}
+
+.tab_content--active {
+  display: block;
+}
+
+.popular {
+  margin-top: 100px;
+}
+
+.popular_inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.popular_nav {
+  display: flex;
+}
+
+.slider_prev, .slider_next {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.slider_prev {
+  transform: rotateZ(180deg);
+  background-color: #e4e4e4;
+  margin-right: 20px;
+}
+
+.slider_next {
+  background-color: #00233E;
+}
+.slider_next svg {
+  fill: #FFFFFF;
+}
+.slider_next svg path {
+  fill: #FFFFFF;
+}
+
+.popularSwiper {
+  margin-top: 37px;
+}
+
+.stepper {
+  display: flex;
+  height: 55px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 1px solid #9F9F9F;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.stepper input {
+  width: 7.4ex;
+  border: none;
+  text-align: center;
+  border-left: 1px solid #9F9F9F;
+  border-right: 1px solid #9F9F9F;
+}
+.stepper input[type=text] {
+  padding: 0;
+}
+.stepper button {
+  border: none;
+  width: 33px;
+  background-color: transparent;
+  transition: background-color 0.2s linear;
+}
+.stepper button:hover {
+  background-color: #F3F3F3;
+}
+.stepper button.disabled {
+  pointer-events: none;
 }/*# sourceMappingURL=style.css.map */
