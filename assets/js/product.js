@@ -155,5 +155,11 @@ new Swiper(".popularSwiper", {
         nextEl: '.slider_next',
         prevEl: '.slider_prev',
     },
+
+    // breakpoints: {
+    //     10: {
+    //         slidesPerView: 4,
+    //     }
+    // }
 })
 
