@@ -1,19 +1,10 @@
 @import "../base/vars";
 
 .textpage {
-    padding-top: 96px;
     padding-bottom: 55px;
-
-    @media (max-width: 999px) {
-        padding-top: 55px;
-    }
 
     @media (max-width: 699px) {
         padding-bottom: 75px;
-    }
-
-    @media (max-width: 499px) {
-        padding-top: 40px;
     }
 
     .intro_text {

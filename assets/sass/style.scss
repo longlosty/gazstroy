@@ -136,6 +136,45 @@ h5 {
 // Footer
 @import "./global/footer";
 
+// Breadcrumbs
+.breadcrumbs{
+    padding-bottom: 47px;
+    padding-top: 28px;
+}
+
+.breadcrumbs_list {
+    list-style: none;
+}
+
+.breadcrumbs_item {
+    display: inline;
+}
+
+.breadcrumbs_item:not(:last-child)::after {
+    position: static;
+    content: "/";
+    margin: 0 5px;
+    color: $breadcrumbColor;
+}
+
+.breadcrumbs_item:last-child .breadcrumbs_link {
+    color: #111;
+    pointer-events: none;
+}
+
+.breadcrumbs_link {
+    color: $breadcrumbColor;
+    text-decoration: none;
+    transition: color .2s ease;
+
+    &:hover {
+        color: #111;
+    }
+}
+
+
+
+
 
 // Text Page
 @import "./text_page/textpage";

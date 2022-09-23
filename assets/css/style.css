@@ -1978,24 +1978,47 @@ h5 {
   }
 }
 
+.breadcrumbs {
+  padding-bottom: 47px;
+  padding-top: 28px;
+}
+
+.breadcrumbs_list {
+  list-style: none;
+}
+
+.breadcrumbs_item {
+  display: inline;
+}
+
+.breadcrumbs_item:not(:last-child)::after {
+  position: static;
+  content: "/";
+  margin: 0 5px;
+  color: #606060;
+}
+
+.breadcrumbs_item:last-child .breadcrumbs_link {
+  color: #111;
+  pointer-events: none;
+}
+
+.breadcrumbs_link {
+  color: #606060;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.breadcrumbs_link:hover {
+  color: #111;
+}
+
 /* Colors */
 .textpage {
-  padding-top: 96px;
   padding-bottom: 55px;
-}
-@media (max-width: 999px) {
-  .textpage {
-    padding-top: 55px;
-  }
 }
 @media (max-width: 699px) {
   .textpage {
     padding-bottom: 75px;
-  }
-}
-@media (max-width: 499px) {
-  .textpage {
-    padding-top: 40px;
   }
 }
 .textpage .intro_text {
@@ -2470,22 +2493,11 @@ h5 {
 
 /* Colors */
 .contact_page {
-  padding-top: 96px;
   padding-bottom: 55px;
-}
-@media (max-width: 999px) {
-  .contact_page {
-    padding-top: 55px;
-  }
 }
 @media (max-width: 699px) {
   .contact_page {
     padding-bottom: 75px;
-  }
-}
-@media (max-width: 499px) {
-  .contact_page {
-    padding-top: 40px;
   }
 }
 
@@ -2672,22 +2684,11 @@ h5 {
 
 /* Colors */
 .catalog_page {
-  padding-top: 96px;
   padding-bottom: 55px;
-}
-@media (max-width: 999px) {
-  .catalog_page {
-    padding-top: 55px;
-  }
 }
 @media (max-width: 699px) {
   .catalog_page {
     padding-bottom: 75px;
-  }
-}
-@media (max-width: 499px) {
-  .catalog_page {
-    padding-top: 40px;
   }
 }
 .catalog_page .catalog__content {
@@ -2733,18 +2734,7 @@ h5 {
 
 /* Colors */
 .error_page {
-  padding-top: 96px;
   padding-bottom: 75px;
-}
-@media (max-width: 999px) {
-  .error_page {
-    padding-top: 55px;
-  }
-}
-@media (max-width: 499px) {
-  .error_page {
-    padding-top: 40px;
-  }
 }
 .error_page h1 {
   max-width: 896px;
@@ -2870,7 +2860,6 @@ h5 {
 
 /* Colors */
 .goods_page {
-  padding-top: 96px;
   padding-bottom: 55px;
 }
 @media (max-width: 999px) {
@@ -3039,22 +3028,11 @@ h5 {
 
 /* Colors */
 .product_page {
-  padding-top: 96px;
   padding-bottom: 55px;
-}
-@media (max-width: 999px) {
-  .product_page {
-    padding-top: 55px;
-  }
 }
 @media (max-width: 699px) {
   .product_page {
     padding-bottom: 75px;
-  }
-}
-@media (max-width: 499px) {
-  .product_page {
-    padding-top: 40px;
   }
 }
 .product_page .contacts {

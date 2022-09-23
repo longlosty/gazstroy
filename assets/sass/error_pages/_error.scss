@@ -1,16 +1,7 @@
 @import "../base/vars";
 
 .error_page {
-    padding-top: 96px;
     padding-bottom: 75px;
-
-    @media (max-width: 999px) {
-        padding-top: 55px;
-    }
-
-    @media (max-width: 499px) {
-        padding-top: 40px;
-    }
 
     h1 {
         max-width: 896px;
