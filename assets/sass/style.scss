@@ -140,6 +140,10 @@ h5 {
 .breadcrumbs{
     padding-bottom: 47px;
     padding-top: 28px;
+
+    @media (max-width: 499px) {
+        padding-bottom: 30px;
+    }
 }
 
 .breadcrumbs_list {
@@ -171,9 +175,6 @@ h5 {
         color: #111;
     }
 }
-
-
-
 
 
 // Text Page

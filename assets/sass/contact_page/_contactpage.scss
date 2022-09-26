@@ -9,11 +9,11 @@
 
 }
 
-.contacts_info {
+.contact-info {
     position: relative;
 }
 
-.contacts_items {
+.contact-list {
     margin-top: 55px;
     color: #111;
 
@@ -26,7 +26,7 @@
     }
 }
 
-.contact_items--item {
+.contact-list__item {
     display: flex;
     margin-top: 32px;
 
@@ -40,22 +40,30 @@
     }
 }
 
-.contacts_question {
+.contact-ask {
     background-color: $dark;
     color: $white;
     width: 56.1%;
     position: absolute;
     right: 0;
-    top: 83px;
+    top: 311px;
     z-index: 10;
 
     @media (max-width: 799px) {
         width: 100%;
-        top: 280px;
+        top: 470px;
     }
 
     @media (min-width: 799px) and (max-width: 925px) {
         width: 50%;
+    }
+
+    @media (max-width: 499px) {
+        top: 460px;
+    }
+
+    @media (max-width: 399px) {
+        top: 440px;
     }
 
     a {
@@ -68,7 +76,7 @@
     }
 }
 
-.question_inner {
+.ask-inner {
     padding-top: 53px;
     padding-left: 94px;
     display: flex;
@@ -96,7 +104,7 @@
         padding-top: 30px;
     }
 
-    .contacts__call {
+    .contacts-call {
         margin-top: 45px;
 
         @media (min-width: 799px) and (max-width: 925px) {
@@ -171,7 +179,9 @@
     }
 }
 
-.contacts_map {
+.contact-map {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
     margin-top: 40px;
     filter: grayscale(1);
 

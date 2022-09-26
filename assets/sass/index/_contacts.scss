@@ -1,10 +1,6 @@
 @import "../base/vars";
 
-.contacts {
-    position: relative;
-}
-
-.contacts__inner {
+.contacts-inner {
     position: relative;
     top: -97px;
     display: flex;
@@ -17,7 +13,7 @@
     }
 }
 
-.contacts__content {
+.contacts-content {
     color: $white;
     margin: 55px 0 59px 58px;
 
@@ -38,7 +34,7 @@
         margin: 46px 36px 66px 23px;
     }
 
-    .contacts__content--item {
+    .contacts-content__item {
         display: flex;
         margin-bottom: 32px;
 
@@ -49,14 +45,14 @@
         &:last-child {
             margin-bottom: 0;
 
-            .contacts__content--text {
+            .contacts-content__text {
                 @media (max-width: 399px) {
                     width: 60%;
                 }
             }
         }
         
-        .contacts__content--text {
+        .contacts-content__text {
             line-height: 19px / 16px * 100%;
             margin-left: 18px;
 
@@ -76,7 +72,7 @@
     }
 }
 
-.contacts__question {
+.contacts-question {
     color: $white;
     margin-right: 100px;
 
@@ -91,7 +87,7 @@
         align-items: center;
     }
 
-    .contacts__ask {
+    .contacts-question__title {
         font-family: 'Ubuntu';
         font-size: 25px;
         line-height: 106.4%;
@@ -119,7 +115,7 @@
         }
     }
 
-    .contacts__call {
+    .contacts-call {
         margin-bottom: 20px;
 
         @media (max-width: 799px) {

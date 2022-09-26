@@ -11,7 +11,7 @@
         }
     }
 
-    .error_info {
+    .error-content {
         display: flex;
         justify-content: space-between;
         margin-top: 28px;
@@ -22,7 +22,7 @@
  
     }
 
-    .error_content {
+    .error-info {
         display: flex;
         flex-direction: column;
 
@@ -37,7 +37,7 @@
     }
 }
 
-.error_buttons {
+.error-buttons {
     margin-top: 39px;
     display: flex;
     align-items: center;
@@ -90,7 +90,7 @@
 }
 
 
-.error_preview {
+.error-preview {
     max-width: 400px;
     margin-right: 50px;
 

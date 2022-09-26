@@ -9,6 +9,7 @@
     cursor: pointer;
     border: 1px solid $dark;
     transition: color .2s linear;
+    user-select: none;
 
     &:hover {
         background-color: $dark;
@@ -26,6 +27,7 @@
     cursor: pointer;
     border: 2px solid $white;
     transition: color .2s linear;
+    user-select: none;
 
     &:hover {
         background-color: transparent;
