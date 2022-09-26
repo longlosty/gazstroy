@@ -198,10 +198,21 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        background-color: #ffffff;
+        transition: background-color .3s linear;
+        cursor: pointer;
+
+        &.news__nav-disabled {
+            background-color: #ABABAB;
+
+            &:hover {
+                background-color: #ABABAB !important;
+                cursor: auto;
+            }
+        }
     }
 
     .news__nav--prev {
-        background-color: $news__nav--prev;
         transition: all .2s linear;
         margin-right: 19px;
 
@@ -215,9 +226,6 @@
     }
 
     .news__nav--next {
-        background-color: $white;
-        transition: all .2s linear;
-
         &:hover {
             background-color: $light;
         }

@@ -33,14 +33,15 @@
                 <nav class="menu">
                     <ul class="menu__list">
                         <li class="hasDropdown">
-                            <a href="#" target="" class="menu__link"> 
                                 <div class="menu__catalog">
-                                    <span>Каталог</span>
-                                    <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <a href="#" target="" class="menu__link"> 
+                                        <span>Каталог</span>
+                                     </a>
+                                    <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg" id="dropdownTrigger">
                                     <path d="M3.64645 4.35355C3.84171 4.54882 4.15829 4.54882 4.35355 4.35355L7.53553 1.17157C7.7308 0.976311 7.7308 0.659728 7.53553 0.464466C7.34027 0.269204 7.02369 0.269204 6.82843 0.464466L4 3.29289L1.17157 0.464466C0.976311 0.269204 0.659728 0.269204 0.464466 0.464466C0.269204 0.659728 0.269204 0.976311 0.464466 1.17157L3.64645 4.35355ZM3.5 3V4H4.5V3H3.5Z" fill="white"/>
                                     </svg>
                                 </div>
-                            </a>
+        
                             <div class="dropdown">
                                 <ul class="dropdown__list">
                                     <li class="dropdown__item">
@@ -176,51 +177,52 @@
                 <button type="button" class="btn catalog--button">Смотреть все товары</button>
             </div>
             
-            <div class="catalog__content">
-                <div class="catalog__content--item">
+            <div class="catalog-content">
+                <div class="catalog-content__item">
                     <!-- <img src="assets/template/images/catalog/catalogFull.png" alt="" class="item--bg"> -->
-                    <div class="item__info">
-                        <div class="item__title">ГАЗОРЕГУЛЯТОРНЫЕ ПУНКТЫ</div>
+                    <div class="item-info">
+                        <div class="item-info__title">ГАЗОРЕГУЛЯТОРНЫЕ ПУНКТЫ</div>
                         <button type="button" class="btn--solid item--button">Подробнее</button>
                     </div>
-                    <div class="item__image">
+                    <div class="item-image">
                         <img src="assets/template/images/catalog/catalog1.png" alt="" srcset="">
                     </div>
                 </div>
 
-                <div class="catalog__content--item">
+                <div class="catalog-content__item">
                     <!-- <img src="assets/template/images/catalog/catalogFull.png" alt="" class="item--bg"> -->
-                    <div class="item__info">
-                        <div class="item__title">РЕГУЛЯТОРЫ ДАВЛЕНИЯ ГАЗА</div>
+                    <div class="item-info">
+                        <div class="item-info__title">РЕГУЛЯТОРЫ ДАВЛЕНИЯ ГАЗА</div>
                         <button type="button" class="btn--solid item--button">Подробнее</button>
                     </div>
-                    <div class="item__image">
+                    <div class="item-image">
                         <img src="assets/template/images/catalog/catalog2.png" alt="" srcset="">
                     </div>
                 </div>
 
-                <div class="catalog__content--item">
+                <div class="catalog-content__item">
                     <!-- <img src="assets/template/images/catalog/catalogFull.png" alt="" class="item--bg"> -->
-                    <div class="item__info">
-                        <div class="item__title">ФИЛЬТРЫ ГАЗОВЫЕ</div>
+                    <div class="item-info">
+                        <div class="item-info__title">ФИЛЬТРЫ ГАЗОВЫЕ</div>
                         <button type="button" class="btn--solid item--button">Подробнее</button>
                     </div>
-                    <div class="item__image">
+                    <div class="item-image">
                         <img src="assets/template/images/catalog/catalog3.png" alt="" srcset="">
                     </div>
                 </div>
 
-                <div class="catalog__content--item">
+                <div class="catalog-content__item">
                     <!-- <img src="assets/template/images/catalog/catalogFull.png" alt="" class="item--bg"> -->
-                    <div class="item__info">
-                        <div class="item__title">ФИЛЬТРЫ СЕТЧАТЫЕ</div>
+                    <div class="item-info">
+                        <div class="item-info__title">ФИЛЬТРЫ СЕТЧАТЫЕ</div>
                         <button type="button" class="btn--solid item--button">Подробнее</button>
                     </div>
-                    <div class="item__image">
+                    <div class="item-image">
                         <img src="assets/template/images/catalog/catalog4.png" alt="" srcset="">
                     </div>
                 </div>
             </div>
+        </div>
     </section>
 
     <section class="about">
@@ -241,7 +243,7 @@
                     </div> -->
                     <div class="about__content--info">
                         <div class="about__content--years">
-                            <span class='numscroller' data-min='1' data-max='18' data-delay='1.5' data-increment='1'>0</span>
+                            <span class="numscroller" data-min="1" data-max="18" data-delay="1.5" data-increment="1">0</span>
                             <p>лет</p>
                         </div>
                         <div class="about__content--subtitle">подзаголовок из нескольких строчек </div>
@@ -254,8 +256,7 @@
 
     <section class="news">
         <div class="news__slider">
-            <div class="news__info">
-                    
+            <div class="news__info">     
                     <div class="swiper newsSwiper" id="news-galary">
                         <div class="swiper-wrapper">
                             <div class="slide swiper-slide">
@@ -315,27 +316,27 @@
 
     <section class="contacts">
         <div class="container">
-            <div class="contacts__inner">
-                <div class="contacts__content">
-                    <div class="contacts__content--item">
-                        <img src="./assets/template/svg/contacts/geo.svg" alt="" class="contacts__content--img">
-                        <span class="contacts__content--text">г. Саратов, улица имени В.И. Осипова, 1к5</span>
+            <div class="contacts-inner">
+                <div class="contacts-content">
+                    <div class="contacts-content__item">
+                        <img src="./assets/template/svg/contacts/geo.svg" alt="">
+                        <span class="contacts-content__text">г. Саратов, улица имени В.И. Осипова, 1к5</span>
                     </div>
-                    <div class="contacts__content--item">
-                        <img src="./assets/template/svg/contacts/phone.svg" alt="" class="contacts__content--img">
-                        <span class="contacts__content--text">
+                    <div class="contacts-content__item">
+                        <img src="./assets/template/svg/contacts/phone.svg" alt="">
+                        <span class="contacts-content__text">
                             <a href="tel:88452762589">8 (8452) 76-25-89</a>
                         </span>
                     </div>
-                    <div class="contacts__content--item">
-                        <img src="./assets/template/svg/contacts/clock.svg" alt="" class="contacts__content--img">
-                        <span class="contacts__content--text">Время работы: 09:00 до 18:00</span>
+                    <div class="contacts-content__item">
+                        <img src="./assets/template/svg/contacts/clock.svg" alt="">
+                        <span class="contacts-content__text">Время работы: 09:00 до 18:00</span>
                     </div>
                 </div>
                 
-                <div class="contacts__question">
-                    <h3 class="contacts__ask">остались воросы?</h3>
-                    <div class="contacts__call">
+                <div class="contacts-question">
+                    <h3 class="contacts-question__title">остались воросы?</h3>
+                    <div class="contacts-call">
                         <input type="tel" name="" id="phone" class="btn contacts--phone" placeholder="Ваш телефон">
                         <button class="btn--solid contacts--call">Заказать звонок</button>
                     </div>
@@ -410,9 +411,18 @@
 
 <script src="assets/js/libs/jquery-3.6.1.min.js"></script>
 <script src="assets/js/libs/jquery.maskedinput.min.js"></script>
+<script>
+    /* PHONE INPUT MASK */
+    $(document).ready(function () {
+        $("#phone").mask("+7 (999)999-99-99", {
+            autoclear: false
+        });
+    });
+</script>
 <script src="assets/js/libs/numscroller-1.0.js"></script>
 <script src="assets/js/libs/swiper-bundle.min.js"></script>
-<script src="assets/js/index.js"></script>
+<script src="assets/js/sliders.js"></script>
+<script src="assets/js/app.js"></script>
 </body>
 
 </html>

@@ -32,14 +32,14 @@
                 <nav class="menu">
                     <ul class="menu__list">
                         <li class="hasDropdown">
-                            <a href="#" target="" class="menu__link"> 
-                                <div class="menu__catalog">
+                            <div class="menu__catalog">
+                                <a href="#" target="" class="menu__link"> 
                                     <span>Каталог</span>
-                                    <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M3.64645 4.35355C3.84171 4.54882 4.15829 4.54882 4.35355 4.35355L7.53553 1.17157C7.7308 0.976311 7.7308 0.659728 7.53553 0.464466C7.34027 0.269204 7.02369 0.269204 6.82843 0.464466L4 3.29289L1.17157 0.464466C0.976311 0.269204 0.659728 0.269204 0.464466 0.464466C0.269204 0.659728 0.269204 0.976311 0.464466 1.17157L3.64645 4.35355ZM3.5 3V4H4.5V3H3.5Z" fill="white"/>
-                                    </svg>
-                                </div>
-                            </a>
+                                 </a>
+                                <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg" id="dropdownTrigger">
+                                <path d="M3.64645 4.35355C3.84171 4.54882 4.15829 4.54882 4.35355 4.35355L7.53553 1.17157C7.7308 0.976311 7.7308 0.659728 7.53553 0.464466C7.34027 0.269204 7.02369 0.269204 6.82843 0.464466L4 3.29289L1.17157 0.464466C0.976311 0.269204 0.659728 0.269204 0.464466 0.464466C0.269204 0.659728 0.269204 0.976311 0.464466 1.17157L3.64645 4.35355ZM3.5 3V4H4.5V3H3.5Z" fill="white"/>
+                                </svg>
+                            </div>
                             <div class="dropdown">
                                 <ul class="dropdown__list">
                                     <li class="dropdown__item">
@@ -157,7 +157,6 @@
 
     <main class="cart_page">
         <div class="container">
-
             <section class="breadcrumbs">
                 <ul class="breadcrumbs_list">
                     <li class="breadcrumbs_item">
@@ -169,30 +168,30 @@
                 </ul>
             </section>
 
-            <section class="cart_header">
+            <section class="cart-header">
                 <h1>Корзина</h1>
                 <button>Очистить корзину</button>
             </section>
 
-            <section class="cart_content">
-                <div class="cart_content-header">
+            <section class="cart-content">
+                <div class="cart-content__header">
                     <span>Наименование товара</span>
                     <span>Цена</span>
                     <span>Количество</span>
                     <span>Итого</span>
                 </div>
 
-                <div class="product_card">
-                    <div class="product_card-preview">
+                <div class="product-card">
+                    <div class="product-card__preview">
                         <img src="assets/template/images/cart/cart_img1.png" alt="">
                     </div>
                     
-                    <div class="product_card-title">
+                    <div class="product-card__title">
                         <p class="title">Регулятор давления газа типа РДГ-150(Н)В</p>
                         <p class="articul">Артикул: 23456781</p>
                     </div>
 
-                    <div class="product_card-price">
+                    <div class="product-card__price">
                         <p class="price">64 900 ₽</p>
                     </div>
 
@@ -202,11 +201,11 @@
                         <button id="stepUp">+</button>
                     </div>
 
-                    <div class="product_card-fullprice">
+                    <div class="product-card__fullprice">
                         <p class="fullprice">64 900 ₽</p>
                     </div>
 
-                    <div class="product_card-delete">
+                    <div class="product-card__delete">
                         <button>
                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M11.5235 9.75613C12.0122 10.245 12.0122 11.0363 11.5235 11.5238C11.2798 11.7675 10.9598 11.89 10.6396 11.89C10.3196 11.89 9.99965 11.7675 9.75589 11.5238L5.99971 7.76738L2.24353 11.5238C1.99977 11.7675 1.67979 11.89 1.35981 11.89C1.03961 11.89 0.719631 11.7675 0.475872 11.5238C-0.0127907 11.0363 -0.0127907 10.245 0.475872 9.75613L4.23228 5.99995L0.475872 2.24377C-0.0127907 1.75488 -0.0127907 0.963634 0.475872 0.476116C0.964764 -0.0125465 1.75463 -0.0125465 2.24353 0.476116L5.99971 4.23252L9.75589 0.476116C10.2448 -0.0125465 11.0346 -0.0125465 11.5235 0.476116C12.0122 0.963634 12.0122 1.75488 11.5235 2.24377L7.76713 5.99995L11.5235 9.75613Z" fill="#FAFAFA"/>
@@ -216,17 +215,17 @@
                     
                 </div>
 
-                <div class="product_card">
-                    <div class="product_card-preview">
+                <div class="product-card">
+                    <div class="product-card__preview">
                         <img src="assets/template/images/cart/cart_img2.png" alt="">
                     </div>
                     
-                    <div class="product_card-title">
+                    <div class="product-card__title">
                         <p class="title">ФИЛЬТР СЕТЧАТЫЙ ФС-I (ФПТ)</p>
                         <p class="articul">Артикул: 23456781</p>
                     </div>
 
-                    <div class="product_card-price">
+                    <div class="product-card__price">
                         <p class="price">10 500 ₽</p>
                     </div>
 
@@ -236,11 +235,11 @@
                         <button id="stepUp">+</button>
                     </div>
 
-                    <div class="product_card-fullprice">
+                    <div class="product-card__fullprice">
                         <p class="fullprice">21 000 ₽</p>
                     </div>
 
-                    <div class="product_card-delete">
+                    <div class="product-card__delete">
                         <button>
                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M11.5235 9.75613C12.0122 10.245 12.0122 11.0363 11.5235 11.5238C11.2798 11.7675 10.9598 11.89 10.6396 11.89C10.3196 11.89 9.99965 11.7675 9.75589 11.5238L5.99971 7.76738L2.24353 11.5238C1.99977 11.7675 1.67979 11.89 1.35981 11.89C1.03961 11.89 0.719631 11.7675 0.475872 11.5238C-0.0127907 11.0363 -0.0127907 10.245 0.475872 9.75613L4.23228 5.99995L0.475872 2.24377C-0.0127907 1.75488 -0.0127907 0.963634 0.475872 0.476116C0.964764 -0.0125465 1.75463 -0.0125465 2.24353 0.476116L5.99971 4.23252L9.75589 0.476116C10.2448 -0.0125465 11.0346 -0.0125465 11.5235 0.476116C12.0122 0.963634 12.0122 1.75488 11.5235 2.24377L7.76713 5.99995L11.5235 9.75613Z" fill="#FAFAFA"/>
@@ -251,13 +250,13 @@
                 </div>
             </section>
 
-            <section class="cart_order">
-                <div class="cart_rezult">
+            <section class="cart-order">
+                <div class="cart-rezult">
                     <span>Итого:</span>
-                    <span class="cart_fullprice">85 900 ₽</span>
+                    <span class="cart-fullprice">85 900 ₽</span>
                 </div>
 
-                <div class="cart_buttons">
+                <div class="cart-buttons">
                     <button class="btn btn-cartUpdate">Обновить корзину</button>
                     <button class="btn btn-cartMakeOrder">Оформить заказ</button>
                 </div>
@@ -324,7 +323,7 @@
         </div>
     </footer>
 
-<script src="assets/js/product.js"></script>
+<script src="assets/js/app.js"></script>
 </body>
 
 </html>

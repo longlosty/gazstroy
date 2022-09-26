@@ -10,11 +10,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta name="theme-color" content="#ffffff">
     <link rel="shortcut icon" href="assets/template/images/favicon/favicon.png">
+    <link
+    rel="stylesheet"
+    href="assets/css/swiper-bundle.css"
+    />
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body class = "template">
-    
+
 <header class="global__header">
     <div class="container">
         <div class="header__inner">
@@ -31,7 +35,7 @@
                         <div class="menu__catalog">
                             <a href="#" target="" class="menu__link"> 
                                 <span>Каталог</span>
-                             </a>
+                                </a>
                             <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg" id="dropdownTrigger">
                             <path d="M3.64645 4.35355C3.84171 4.54882 4.15829 4.54882 4.35355 4.35355L7.53553 1.17157C7.7308 0.976311 7.7308 0.659728 7.53553 0.464466C7.34027 0.269204 7.02369 0.269204 6.82843 0.464466L4 3.29289L1.17157 0.464466C0.976311 0.269204 0.659728 0.269204 0.464466 0.464466C0.269204 0.659728 0.269204 0.976311 0.464466 1.17157L3.64645 4.35355ZM3.5 3V4H4.5V3H3.5Z" fill="white"/>
                             </svg>
@@ -95,14 +99,45 @@
                     <a href="">
                         <img src="assets/template/svg/header/cart.svg" alt="" srcset="">
                         <div class="cart-block">
-                            <span>Корзина</span>
-                            <span>10 товаров</span>
+                            <p>Корзина</p>
+                            <p>
+                            <span id="cartQuantity">0</span>товаров</p>
                         </div>
                     </a>
                     <div class="cart__popup">
-                        <div class="cart__empty">
+                        <!-- <div class="cart__empty">
                             <div class="empty__title">Корзина пуста</div>
                             <button class="btn--solid empty--button">Перейти в каталог</button>
+                        </div> -->
+
+                        <div class="cart__popup--content">
+                            <div class="popup_card">
+                                <div class="card_preview">
+                                    <img src="assets/template/images/cart/cart_img1.png" alt="">
+                                </div>
+                                <div class="card_info">
+                                    <p class="card_title">Рeгулятор давления газа типа РДГ-150Н(В)</p>
+                                    <p class="card_price">
+                                    <span id="productQuantity">1</span>х 64 900 ₽</p>
+                                </div>
+                                <div class="card_delete">
+                                    <button>
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.5235 9.75613C12.0122 10.245 12.0122 11.0363 11.5235 11.5238C11.2798 11.7675 10.9598 11.89 10.6396 11.89C10.3196 11.89 9.99965 11.7675 9.75589 11.5238L5.99971 7.76738L2.24353 11.5238C1.99977 11.7675 1.67979 11.89 1.35981 11.89C1.03961 11.89 0.719631 11.7675 0.475872 11.5238C-0.0127907 11.0363 -0.0127907 10.245 0.475872 9.75613L4.23228 5.99995L0.475872 2.24377C-0.0127907 1.75488 -0.0127907 0.963634 0.475872 0.476116C0.964764 -0.0125465 1.75463 -0.0125465 2.24353 0.476116L5.99971 4.23252L9.75589 0.476116C10.2448 -0.0125465 11.0346 -0.0125465 11.5235 0.476116C12.0122 0.963634 12.0122 1.75488 11.5235 2.24377L7.76713 5.99995L11.5235 9.75613Z" fill="#FAFAFA"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="popup_result">
+                                <span>Сумма:</span>
+                                <span class="fullprice" id="#fullprice">64 900 ₽</span>
+                            </div>
+
+                            <div class="popup_buttons">
+                                <button class="btn">Оформить заказ</button>
+                                <button class="btn">Перейти в корзину</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -120,7 +155,7 @@
     </div>
 </header>
 
-<main class="catalog_page">
+<main class="cart_page">
     <div class="container">
         <section class="breadcrumbs">
             <ul class="breadcrumbs_list">
@@ -128,168 +163,56 @@
                     <a href="index.html" class="breadcrumbs_link">Главная</a>
                 </li>
                 <li class="breadcrumbs_item">
-                    <a href="#" class="breadcrumbs_link">Каталог продукции</a>
+                    <a href="#" class="breadcrumbs_link">Корзина</a>
                 </li>
             </ul>
         </section>
 
-        <div class="page-title">
-            <h1>Каталог</h1>
-        </div>
-
-        <section class="catalog-content">
-            <div class="catalog-content__item">
-                <div class="item-info">
-                    <div class="item-info__title">ГАЗОРЕГУЛЯТОРНЫЕ ПУНКТЫ</div>
-                    <button type="button" class="btn--solid item--button">Подробнее</button>
-                </div>
-                <div class="item-image">
-                    <img src="assets/template/images/catalog/catalog1.png" alt="" srcset="">
-                </div>
+        <section class="cart-section">
+            <div class="cart-header">
+                <h1>Корзина</h1>
+                <button>Очистить корзину</button>
             </div>
 
-            <div class="catalog-content__item">
-                <div class="item-info">
-                    <div class="item-info__title">РЕГУЛЯТОРЫ ДАВЛЕНИЯ ГАЗА</div>
-                    <button type="button" class="btn--solid item--button">Подробнее</button>
-                </div>
-                <div class="item-image">
-                    <img src="assets/template/images/catalog/catalog2.png" alt="" srcset="">
-                </div>
-            </div>
-
-            <div class="catalog-content__item">
-                <div class="item-info">
-                    <div class="item-info__title">ФИЛЬТРЫ ГАЗОВЫЕ</div>
-                    <button type="button" class="btn--solid item--button">Подробнее</button>
-                </div>
-                <div class="item-image">
-                    <img src="assets/template/images/catalog/catalog3.png" alt="" srcset="">
-                </div>
-            </div>
-
-            <div class="catalog-content__item">
-                <div class="item-info">
-                    <div class="item-info__title">КЛАПАНЫ ПРЕДОХРАНИТЕЛЬНЫЕ ЗАПОРНЫЕ</div>
-                    <button type="button" class="btn--solid item--button">Подробнее</button>
-                </div>
-                <div class="item-image">
-                    <img src="assets/template/images/catalog/catalog_page4.png" alt="" srcset="">
-                </div>
-            </div>
-
-            <div class="catalog-content__item">
-                <div class="item-info">
-                    <div class="item-info__title">КЛАПАНЫ ПРЕДОХРАНИТЕЛЬНЫЕ СБРОЧНЫЕ</div>
-                    <button type="button" class="btn--solid item--button">Подробнее</button>
-                </div>
-                <div class="item-image">
-                    <img src="assets/template/images/catalog/5.png" alt="" srcset="">
-                </div>
-            </div>
-
-            <div class="catalog-content__item">
-                <div class="item-info">
-                    <div class="item-info__title">ЗАПОРНАЯ АРМАТУРА</div>
-                    <button type="button" class="btn--solid item--button">Подробнее</button>
-                </div>
-                <div class="item-image">
-                    <img src="assets/template/images/catalog/6.png" alt="" srcset="">
-                </div>
-            </div>
-
-            <div class="catalog-content__item">
-                <div class="item-info">
-                    <div class="item-info__title">ШУМОГЛУШИТЕЛИ ГАЗА ШГ, ГШ</div>
-                    <button type="button" class="btn--solid item--button">Подробнее</button>
-                </div>
-                <div class="item-image">
-                    <img src="assets/template/images/catalog/7.png" alt="" srcset="">
-                </div>
-            </div>
-
-            <div class="catalog-content__item">
-                <div class="item-info">
-                    <div class="item-info__title">ФИЛЬТРЫ ЖИДКОСТНЫЕ</div>
-                    <button type="button" class="btn--solid item--button">Подробнее</button>
-                </div>
-                <div class="item-image">
-                    <img src="assets/template/images/catalog/8.png" alt="" srcset="">
-                </div>
-            </div>
-
-            <div class="catalog-content__item">
-                <div class="item-info">
-                    <div class="item-info__title">УЗЛЫ УЧЁТА РАСХОДА ГАЗА</div>
-                    <button type="button" class="btn--solid item--button">Подробнее</button>
-                </div>
-                <div class="item-image">
-                    <img src="assets/template/images/catalog/9.png" alt="" srcset="">
-                </div>
-            </div>
-
-            <div class="catalog-content__item">
-                <div class="item-info">
-                    <div class="item-info__title">ФИЛЬТРЫ ИНДИКАТОРЫ ПЕРЕПАДА ДАВЛЕНИЯ ИПД, ДИПД</div>
-                    <button type="button" class="btn--solid item--button">Подробнее</button>
-                </div>
-                <div class="item-image">
-                    <img src="assets/template/images/catalog/10.png" alt="" srcset="">
-                </div>
-            </div>
-
-            <div class="catalog-content__item">
-                <div class="item-info">
-                    <div class="item-info__title">ИЗОЛИРУЮШИЕ СОЕДИНЕНИЯ</div>
-                    <button type="button" class="btn--solid item--button">Подробнее</button>
-                </div>
-                <div class="item-image">
-                    <img src="assets/template/images/catalog/11.png" alt="" srcset="">
-                </div>
-            </div>
-
-            <div class="catalog-content__item">
-                <div class="item-info">
-                    <div class="item-info__title">ФИЛЬТРЫ-СЕПАРАТОРЫ ГАЗОВЫЕ</div>
-                    <button type="button" class="btn--solid item--button">Подробнее</button>
-                </div>
-                <div class="item-image">
-                    <img src="assets/template/images/catalog/12.png" alt="" srcset="">
-                </div>
-            </div>
+            
         </section>
+        
 
-        <section class="contacts">
-            <div class="contacts-inner">
-                <div class="contacts-content">
-                    <div class="contacts-content__item">
-                        <img src="./assets/template/svg/contacts/geo.svg" alt="">
-                        <span class="contacts-content__text">г. Саратов, улица имени В.И. Осипова, 1к5</span>
-                    </div>
-                    <div class="contacts-content__item">
-                        <img src="./assets/template/svg/contacts/phone.svg" alt="">
-                        <span class="contacts-content__text">
-                            <a href="tel:88452762589">8 (8452) 76-25-89</a>
-                        </span>
-                    </div>
-                    <div class="contacts-content__item">
-                        <img src="./assets/template/svg/contacts/clock.svg" alt="">
-                        <span class="contacts-content__text">Время работы: 09:00 до 18:00</span>
-                    </div>
-                </div>
-                
-                <div class="contacts-question">
-                    <h3 class="contacts-question__title">остались воросы?</h3>
-                    <div class="contacts-call">
-                        <input type="tel" name="" id="phone" class="btn contacts--phone" placeholder="Ваш телефон">
-                        <button class="btn--solid contacts--call">Заказать звонок</button>
-                    </div>
-                    <div class="confidency">
-                        <span>Нажимая на кнопку “Заказать звонок” вы соглашаетесь с 
-                            <a href="">политикой конфиденциальности.</a>
-                        </span>
-                    </div>
-                </div>
+        <table>
+            <tr>
+                <td></td>
+                <td>НАИМЕНОВАНИЕ ТОВАРА</td>
+                <td>ЦЕНА</td>
+                <td>КОЛИЧЕСТВО</td>
+                <td>ИТОГО</td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <section class="cart-order">
+            <div class="cart-rezult">
+                <span>Итого:</span>
+                <span class="cart-fullprice">85 900 ₽</span>
+            </div>
+
+            <div class="cart-buttons">
+                <button class="btn btn-cartUpdate">Обновить корзину</button>
+                <button class="btn btn-cartMakeOrder">Оформить заказ</button>
             </div>
         </section>
     </div>
@@ -354,16 +277,6 @@
     </div>
 </footer>
 
-<script src="assets/js/libs/jquery-3.6.1.min.js"></script>
-<script src="assets/js/libs/jquery.maskedinput.min.js"></script>
-<script>
-    /* PHONE INPUT MASK */
-    $(document).ready(function () {
-        $("#phone").mask("+7 (999)999-99-99", {
-            autoclear: false
-        });
-    });
-</script>
 <script src="assets/js/app.js"></script>
 </body>
 

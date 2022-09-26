@@ -1,3 +1,5 @@
+/* HEADER  */
+
 // Burger menu
 const burger = document.querySelector('.menu__mbl');
 const menu = document.querySelector('.menu');
@@ -15,15 +17,18 @@ burger.addEventListener("click", function () {
 })
 
 // Dropdown
-const dropdownLink = document.querySelector('.hasDropdown');
+const dropdownTrigger = document.querySelector('#dropdownTrigger');
+const hasDropdown = document.querySelector('.hasDropdown');
 const dropdown = document.querySelector('.dropdown');
 
-dropdownLink.addEventListener("click", function () {
+dropdownTrigger.addEventListener("click", function () {
     dropdown.classList.toggle('opened');
-    dropdownLink.classList.toggle('opened');
-})
+    hasDropdown.classList.toggle('opened');
+});
 
-// Footer
+/* FOOTER */
+
+// Arrow-up button
 let t;
 function up() {
     let top = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
@@ -34,12 +39,7 @@ function up() {
     return false;
 }
 
-// Phone mask
-$(document).ready(function () {
-    $("#phone").mask("+7 (999)999-99-99", {
-        autoclear: false
-    });
-});
+/* PRODUCT PAGE*/
 
 // Stepper
 const stepper = document.querySelector('.stepper');
@@ -131,7 +131,7 @@ stepperInput.addEventListener('keypress', (e) => {
 
 // Tabs
 const tabBtn = document.querySelectorAll('.tab-btn');
-const tabContent = document.querySelectorAll('.tab_content');
+const tabContent = document.querySelectorAll('.tab-content');
 
 tabBtn.forEach(btn => 
     btn.addEventListener('click', (e) => {
@@ -144,28 +144,12 @@ function switchTab (path) {
     tabBtn.forEach(btn => btn.classList.remove('tab-btn--active'));
     document.querySelector(`[data-tabs-path="${path}"]`).classList.add('tab-btn--active');
     
-    tabContent.forEach( content => content.classList.remove('tab_content--active'));
-    document.querySelector(`[data-tabs-target="${path}"]`).classList.add('tab_content--active');
+    tabContent.forEach( content => content.classList.remove('tab-content--active'));
+    document.querySelector(`[data-tabs-target="${path}"]`).classList.add('tab-content--active');
 }
 
-// Popular slider
-new Swiper(".popularSwiper", {
-    slidesPerView: 4,
-    navigation: {
-        nextEl: '.slider_next',
-        prevEl: '.slider_prev',
-    },
-
-    // breakpoints: {
-    //     10: {
-    //         slidesPerView: 4,
-    //     }
-    // }
-})
-
-
+/* HEADER */
 // Add to card
-
 const productButton = document.querySelectorAll('#addToCart');
 const cartPopup = document.querySelector('.cart__popup--content');
 const cartQuantity = document.querySelector('#cartQuantity');
@@ -209,3 +193,4 @@ const generateCartProduct = (img, title, quantity, price, id) => {
 
     `;
 }
+
