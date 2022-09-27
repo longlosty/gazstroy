@@ -18,7 +18,13 @@
 }
 
 .cart-content {
-    padding-top: 45px;
+    width: 100%;
+    margin-top: 45px;
+    border-collapse: collapse;
+
+    @media (max-width: 899px) {
+        margin-top: 10px;
+    }
     
     span {
         line-height: 233%;
@@ -26,41 +32,93 @@
         color: #111;
         font-weight: 500;
     }
+
+    th {
+        text-align: left;
+        padding-bottom: 8px;
+    }
+
+    td {
+        padding: 20px 0;
+        &:first-child {
+            width: 6%;
+        }
+
+        &:last-child {
+            width: 0%;
+        }
+
+        @media (max-width: 899px) {
+            width: unset !important;
+            padding: unset;
+
+            &:first-child {
+                padding-top: 30px;
+            }
+        }
+    }
+
+    tr {
+        padding-bottom: 20px;
+        border-bottom: 1px solid #606060;
+
+        @media (max-width: 899px) {
+            border: none;
+            padding: 0;
+        }
+    }
+
+    thead {
+        @media (max-width: 899px) {
+            display: none;
+        }
+    }
+
+    tbody {
+        @media (max-width: 899px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
 }
 
 .cart-content__header {
     border-bottom: 1px solid #606060;
-
-    span {
-        &:first-child {
-            margin-left: 150px;
-        }
-
-        margin-right: 150px;
-    }
 }
 
 .product-card {
-    display: flex;
-    align-items: center;
     margin-top: 20px;
     color: #111;
-    position: relative;
     border-bottom: 1px solid #606060;
     padding-bottom: 20px;
 
-    .stepper {
-        margin-left: 135px;
+    @media (max-width: 899px) {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 15px !important;
+        margin-bottom: 20px;
+        border: none;
+        width: 260px;
+
+        border: 1px solid rgba(227, 232, 234, 0.5);
+        border-radius: 4px;
+        -webkit-box-shadow: 0px 5px 15px 0px rgb(0 0 0 / 5%);
+        box-shadow: 0px 5px 15px 0px rgb(0 0 0 / 5%);
     }
+
 }
 
 .product-card__preview {
     width: 100px;
     height: 100px;
     border: 1px solid $goodsborder;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+    @media (max-width: 899px) {
+        display: block;
+        margin: 0 auto;
+    }
 
     img {
         max-width: 100%;
@@ -70,44 +128,112 @@
 }
 
 .product-card__title {
-    width: 220px;
-    line-height: 130%;
-    margin-left: 46px;
+    width: 17%;
+
+    @media (max-width: 899px) {
+        width: unset;
+        margin: 15px auto;
+    }
+
+    p {
+        line-height: 130%;
+        width: 220px;
+    }
 
     .title {
         margin-bottom: 8px;
+
+        @media (max-width: 899px) {
+            margin-bottom: 0;
+        }
     }
 
     .articul {
         line-height: 233%;
         font-size: 14px;
+
+        @media (max-width: 899px) {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+        }
     }
 }
 
 .product-card__price {
-    margin-left: 125px;
+    width: 12%;
+
+    @media (max-width: 899px) {
+        width: unset;
+        display: flex;
+        align-items: center;
+    }
 
     .price {
         font-weight: 500;
         font-size: 20px;
         line-height: 150%;
+
+        @media (max-width: 899px) {
+            margin-left: auto;
+        }
+    }
+
+    .price_hidden {
+        display: none;
+
+        @media (max-width: 899px) {
+            display: block;
+        }
+    }
+}
+
+.product-card__quantity {
+    width: 14.5%;
+
+    @media (max-width: 899px) {
+        width: unset;
+        margin: 15px auto;
     }
 }
 
 .product-card__fullprice {
-    margin-left: 145px;
+    width: 10.5%;
+
+    @media (max-width: 899px) {
+        width: unset;
+        display: flex;
+        align-items: center;
+    }
 
     .fullprice {
         font-weight: 500;
         font-size: 20px;
         line-height: 150%;
+
+        @media (max-width: 899px) {
+            margin-left: auto;
+        }
+    }
+    
+    .fullprice_hidden {
+        display: none;
+
+        @media (max-width: 899px) {
+            display: block;
+        }
     }
 }
 
 .product-card__delete {
-    margin-left: auto;
     height: 30px;
     width: 30px;
+
+    @media (max-width: 899px) {
+        position: absolute;
+        top: 7px;
+        right: 7px;
+    }
 
     button {
         background-color:  #DF2D2D;

@@ -3581,7 +3581,14 @@ h5 {
 }
 
 .cart-content {
-  padding-top: 45px;
+  width: 100%;
+  margin-top: 45px;
+  border-collapse: collapse;
+}
+@media (max-width: 899px) {
+  .cart-content {
+    margin-top: 10px;
+  }
 }
 .cart-content span {
   line-height: 233%;
@@ -3589,37 +3596,86 @@ h5 {
   color: #111;
   font-weight: 500;
 }
+.cart-content th {
+  text-align: left;
+  padding-bottom: 8px;
+}
+.cart-content td {
+  padding: 20px 0;
+}
+.cart-content td:first-child {
+  width: 6%;
+}
+.cart-content td:last-child {
+  width: 0%;
+}
+@media (max-width: 899px) {
+  .cart-content td {
+    width: unset !important;
+    padding: unset;
+  }
+  .cart-content td:first-child {
+    padding-top: 30px;
+  }
+}
+.cart-content tr {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #606060;
+}
+@media (max-width: 899px) {
+  .cart-content tr {
+    border: none;
+    padding: 0;
+  }
+}
+@media (max-width: 899px) {
+  .cart-content thead {
+    display: none;
+  }
+}
+@media (max-width: 899px) {
+  .cart-content tbody {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
 
 .cart-content__header {
   border-bottom: 1px solid #606060;
 }
-.cart-content__header span {
-  margin-right: 150px;
-}
-.cart-content__header span:first-child {
-  margin-left: 150px;
-}
 
 .product-card {
-  display: flex;
-  align-items: center;
   margin-top: 20px;
   color: #111;
-  position: relative;
   border-bottom: 1px solid #606060;
   padding-bottom: 20px;
 }
-.product-card .stepper {
-  margin-left: 135px;
+@media (max-width: 899px) {
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 15px !important;
+    margin-bottom: 20px;
+    border: none;
+    width: 260px;
+    border: 1px solid rgba(227, 232, 234, 0.5);
+    border-radius: 4px;
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05);
+  }
 }
 
 .product-card__preview {
   width: 100px;
   height: 100px;
   border: 1px solid #D7D7D7;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+}
+@media (max-width: 899px) {
+  .product-card__preview {
+    display: block;
+    margin: 0 auto;
+  }
 }
 .product-card__preview img {
   max-width: 100%;
@@ -3628,40 +3684,116 @@ h5 {
 }
 
 .product-card__title {
-  width: 220px;
+  width: 17%;
+}
+@media (max-width: 899px) {
+  .product-card__title {
+    width: unset;
+    margin: 15px auto;
+  }
+}
+.product-card__title p {
   line-height: 130%;
-  margin-left: 46px;
+  width: 220px;
 }
 .product-card__title .title {
   margin-bottom: 8px;
+}
+@media (max-width: 899px) {
+  .product-card__title .title {
+    margin-bottom: 0;
+  }
 }
 .product-card__title .articul {
   line-height: 233%;
   font-size: 14px;
 }
+@media (max-width: 899px) {
+  .product-card__title .articul {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+  }
+}
 
 .product-card__price {
-  margin-left: 125px;
+  width: 12%;
+}
+@media (max-width: 899px) {
+  .product-card__price {
+    width: unset;
+    display: flex;
+    align-items: center;
+  }
 }
 .product-card__price .price {
   font-weight: 500;
   font-size: 20px;
   line-height: 150%;
 }
+@media (max-width: 899px) {
+  .product-card__price .price {
+    margin-left: auto;
+  }
+}
+.product-card__price .price_hidden {
+  display: none;
+}
+@media (max-width: 899px) {
+  .product-card__price .price_hidden {
+    display: block;
+  }
+}
+
+.product-card__quantity {
+  width: 14.5%;
+}
+@media (max-width: 899px) {
+  .product-card__quantity {
+    width: unset;
+    margin: 15px auto;
+  }
+}
 
 .product-card__fullprice {
-  margin-left: 145px;
+  width: 10.5%;
+}
+@media (max-width: 899px) {
+  .product-card__fullprice {
+    width: unset;
+    display: flex;
+    align-items: center;
+  }
 }
 .product-card__fullprice .fullprice {
   font-weight: 500;
   font-size: 20px;
   line-height: 150%;
 }
+@media (max-width: 899px) {
+  .product-card__fullprice .fullprice {
+    margin-left: auto;
+  }
+}
+.product-card__fullprice .fullprice_hidden {
+  display: none;
+}
+@media (max-width: 899px) {
+  .product-card__fullprice .fullprice_hidden {
+    display: block;
+  }
+}
 
 .product-card__delete {
-  margin-left: auto;
   height: 30px;
   width: 30px;
+}
+@media (max-width: 899px) {
+  .product-card__delete {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+  }
 }
 .product-card__delete button {
   background-color: #DF2D2D;
