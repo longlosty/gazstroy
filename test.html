@@ -8,37 +8,41 @@
 </head>
 <body>
     <div class="stepper">
-        <button class="disabled" data-cart="quantity-button">-</button>
+        <button class="quantity-button stepDown disabled">-</button>
         <input type="text" value="4" class="stepperInput" data-cart="quantity">
-        <button id="stepUp" data-cart="quantity-button">+</button>
+        <button class="quantity-button stepUp">+</button>
     </div>
     <div class="stepper">
-        <button class="stepDown disabled" data-cart="quantity-button">-</button>
+        <button class="quantity-button stepDown disabled">-</button>
         <input type="text" value="4" class="stepperInput" data-cart="quantity">
-        <button id="stepUp" data-cart="quantity-button">+</button>
+        <button class="quantity-button stepUp">+</button>
     </div>
     <div class="stepper">
-        <button class="stepDown disabled" data-cart="quantity-button">-</button>
+        <button class="quantity-button stepDown disabled">-</button>
         <input type="text" value="4" class="stepperInput" data-cart="quantity">
-        <button id="stepUp" data-cart="quantity-button">+</button>
+        <button class="quantity-button stepUp">+</button>
     </div>
     <div class="stepper">
-        <button class="stepDown disabled" data-cart="quantity-button">-</button>
+        <button class="quantity-button stepDown disabled">-</button>
         <input type="text" value="4" class="stepperInput" data-cart="quantity">
-        <button id="stepUp" data-cart="quantity-button">+</button>
+        <button class="quantity-button stepUp">+</button>
     </div>
 
     <script >
-        let stepper = document.querySelectorAll('.stepper');
-        stepper.forEach(
-            el => el.addEventListener('click', (event) => {
-                if (event.target.closest('.stepDown')) {
-                    let a = event.target.closest('.stepperInput');
-                    console.log(a);
-                } 
+        document.addEventListener('click', (event) => {
+            if (event.target.closest('.quantity-button')) {
+                let current = {
+                    button: event.target.closest('.quantity-button'),
+                    input: event.target.closest('.stepper').querySelector('.stepperInput'),
+                };
+
+                if (current.button.classList.contains('stepUp')) {
+                    current.input.value -= 1;
+                }
+
             }
-            )
-        )
+
+        })
     </script>
 </body>
 </html>

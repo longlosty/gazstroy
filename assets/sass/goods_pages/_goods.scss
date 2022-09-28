@@ -130,33 +130,30 @@
 .goods-item:hover {
     background-color: #FAFAFA;
     transition: all .3s ease;
-    cursor: pointer;
-
-    .goods--button {
-        color: $dark;
-        background-color: transparent;
-        transition: all .3s ease;
-    }
-
-    .goods--cart {
-        background-color: $dark;
-        transition: all .3s ease;
-
-        svg {
-            path {
-                fill: $white !important;
-                transition: all .3s ease;
-            }
-        }
-    }
+    cursor: auto;
 }
 
 .goods-item__inner {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 
     padding: 23px 22px 25px 21px;
+
+    .goods-item__new {
+        border: 1px solid #008AD6;
+        padding: 9px 9px 8px 8px;
+        position: absolute;
+        top: 13px;
+        left: 12px;
+
+        span {
+            color: $dark;
+            display: block;
+            line-height: 1;
+        }
+    }
 
     .goods-item__title {
         margin-top: 23px;
@@ -193,7 +190,9 @@
 }
 
 .goods-showMore {
-    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
     margin-top: 10px;
 }
 

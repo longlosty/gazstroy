@@ -3,7 +3,7 @@
 // Product sortings
 const sortingBtn = document.querySelectorAll('.sortingBtn');
 
-const goods = document.querySelector('.goods_items');
+const goods = document.querySelector('.goods-list');
 
 function insertAfter(elem, refElem) {
     return refElem.parentNode.insertBefore(elem, refElem.nextSibling);
@@ -76,5 +76,14 @@ isNewSort.addEventListener('click', () => {
     sortingBtn.forEach(el => el.style.color = "inherit");
 
     isNewSort.style.color = "#111";
-    descdendingSort('data-new');
+    // descdendingSort('data-new');
+
+    for (let i = 0; i < goods.children.length; i++) {
+        for (let j = i; j < goods.children.length; j++) {
+            if (goods.children[i].getAttribute('data-new') < goods.children[j].getAttribute('data-new')) {
+                replacedNode = goods.replaceChild(goods.children[j], goods.children[i]);
+                insertAfter(replacedNode, goods.children[i]);
+            }
+        }
+    }
 })

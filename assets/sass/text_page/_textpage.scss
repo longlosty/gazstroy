@@ -426,11 +426,16 @@
         color: $tabletext;
         width: 100%;
         border-collapse: collapse;
+        overflow-x: scroll;
 
         tr {
             &:first-child {
-                background-color: $dark;
+                background-color: $dark !important;
                 color: $white;
+            }
+
+            &:nth-child(odd) {
+                background-color: $light;
             }
         }
 

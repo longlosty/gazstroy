@@ -10,6 +10,8 @@
     border: 1px solid $dark;
     transition: color .2s linear;
     user-select: none;
+    text-decoration: none;
+    display: inline-block;
 
     &:hover {
         background-color: $dark;
@@ -28,6 +30,8 @@
     border: 2px solid $white;
     transition: color .2s linear;
     user-select: none;
+    text-decoration: none;
+    display: inline-block;
 
     &:hover {
         background-color: transparent;

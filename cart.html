@@ -153,11 +153,6 @@
     </div>
 </header>
 
-<div class="cart-empty" data-cart="thumb-empty">
-    <div class="cart-empty-title">Корзина пока пустая</div>
-    <a href="catalog.html" class="cart-empty-link"> Перейти в каталог </a>
-  </div>
-
 <main class="cart_page">
     <div class="container">
         <section class="breadcrumbs">
@@ -171,228 +166,236 @@
             </ul>
         </section>
 
+        <section class="cart-empty-section" data-cart="thumb-empty">
+            <div class="cart-header">
+                <h1>Корзина</h1>
+            </div>
+            <div class="cart-empty-content">
+                <p>Ваша корзина пуста</p>
+                <a href="catalog.html" class="btn">Перейти в каталог</a>
+            </div>
+        </section>
+
         <section class="cart-section">
             <div class="cart-header">
                 <h1>Корзина</h1>
                 <button data-cart="remove-all">Очистить корзину</button>
             </div>
 
-            
-        </section>
+            <table class="cart-content">
+                <thead>
+                    <tr>
+                        <th>
+                        </th>
         
-        <table class="cart-content">
-            <thead>
-                <tr>
-                    <th>
-                    </th>
+                        <th>
+                            <span>Наименование товара</span>
+                        </th>
+        
+                        <th>
+                            <span>Цена</span>
+                        </th>
+        
+                        <th>
+                            <span>Количество</span>
+                        </th>
+        
+                        <th>
+                            <span>Итого</span>
+                        </th>
+        
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="product-card" data-cart="card">
+                        <td>
+                            <div class="product-card__preview">
+                                <img src="assets/template/images/cart/cart_img1.png" alt="">
+                            </div>
+                        </td>
     
-                    <th>
-                        <span>Наименование товара</span>
-                    </th>
+                        <td class="product-card__title">
+                            <p class="title">Регулятор давления газа типа РДГ-150(Н)В</p>
+                            <p class="articul">Артикул: 23456781</p>
+                        </td>
     
-                    <th>
-                        <span>Цена</span>
-                    </th>
+                        <td class="product-card__price">
+                            <span class="price_hidden">Цена:</span>
+                            <span class="price" data-cart="price">64 900</span>
+                            <span> ₽</span>
+                        </td>
     
-                    <th>
-                        <span>Количество</span>
-                    </th>
+                        <td class="product-card__quantity">
+                            <div class="stepper">
+                                <button class="quantity-button stepDown">-</button>
+                                <input type="text" value="2" class="stepperInput" data-cart="quantity">
+                                <button class="quantity-button stepUp">+</button>
+                            </div>
+                        </td>
     
-                    <th>
-                        <span>Итого</span>
-                    </th>
+                        <td class="product-card__fullprice">
+                            <span class="fullprice_hidden">Итого:</span>
+                            <span class="fullprice" data-cart="summary">64 900</span>
+                            <span>₽</span>
+                        </td>
     
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="product-card" data-cart="card">
-                    <td>
-                        <div class="product-card__preview">
-                            <img src="assets/template/images/cart/cart_img1.png" alt="">
-                        </div>
-                    </td>
+                        <td>
+                            <div class="product-card__delete">
+                                <button data-cart="remove">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.5235 9.75613C12.0122 10.245 12.0122 11.0363 11.5235 11.5238C11.2798 11.7675 10.9598 11.89 10.6396 11.89C10.3196 11.89 9.99965 11.7675 9.75589 11.5238L5.99971 7.76738L2.24353 11.5238C1.99977 11.7675 1.67979 11.89 1.35981 11.89C1.03961 11.89 0.719631 11.7675 0.475872 11.5238C-0.0127907 11.0363 -0.0127907 10.245 0.475872 9.75613L4.23228 5.99995L0.475872 2.24377C-0.0127907 1.75488 -0.0127907 0.963634 0.475872 0.476116C0.964764 -0.0125465 1.75463 -0.0125465 2.24353 0.476116L5.99971 4.23252L9.75589 0.476116C10.2448 -0.0125465 11.0346 -0.0125465 11.5235 0.476116C12.0122 0.963634 12.0122 1.75488 11.5235 2.24377L7.76713 5.99995L11.5235 9.75613Z" fill="#FAFAFA"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+    
+                    <tr class="product-card" data-cart="card">
+                        <td>
+                            <div class="product-card__preview">
+                                <img src="assets/template/images/cart/cart_img2.png" alt="">
+                            </div>
+                        </td>
+    
+                        <td class="product-card__title">
+                            <p class="title">ФИЛЬТР СЕТЧАТЫЙ ФС-I (ФПТ)</p>
+                            <p class="articul">Артикул: 23456781</p>
+                        </td>
+    
+                        <td class="product-card__price">
+                            <span class="price" data-cart="price">10 500</span>
+                            <span>₽</span>
+                        </td>
+    
+                        <td class="product-card__quantity">
+                            <div class="stepper">
+                                <button class="quantity-button stepDown">-</button>
+                                <input type="text" value="4" class="stepperInput" data-cart="quantity">
+                                <button class="quantity-button stepUp">+</button>
+                            </div>
+                        </td>
+    
+                        <td class="product-card__fullprice">
+                            <span class="fullprice_hidden">Итого:</span>
+                            <span class="fullprice" data-cart="summary">10 500</span>
+                            <span>₽</span>
+                        </td>
+    
+                        <td>
+                            <div class="product-card__delete">
+                                <button data-cart="remove">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.5235 9.75613C12.0122 10.245 12.0122 11.0363 11.5235 11.5238C11.2798 11.7675 10.9598 11.89 10.6396 11.89C10.3196 11.89 9.99965 11.7675 9.75589 11.5238L5.99971 7.76738L2.24353 11.5238C1.99977 11.7675 1.67979 11.89 1.35981 11.89C1.03961 11.89 0.719631 11.7675 0.475872 11.5238C-0.0127907 11.0363 -0.0127907 10.245 0.475872 9.75613L4.23228 5.99995L0.475872 2.24377C-0.0127907 1.75488 -0.0127907 0.963634 0.475872 0.476116C0.964764 -0.0125465 1.75463 -0.0125465 2.24353 0.476116L5.99971 4.23252L9.75589 0.476116C10.2448 -0.0125465 11.0346 -0.0125465 11.5235 0.476116C12.0122 0.963634 12.0122 1.75488 11.5235 2.24377L7.76713 5.99995L11.5235 9.75613Z" fill="#FAFAFA"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+    
+                    <tr class="product-card" data-cart="card">
+                        <td>
+                            <div class="product-card__preview">
+                                <img src="assets/template/images/cart/cart_img2.png" alt="">
+                            </div>
+                        </td>
+    
+                        <td class="product-card__title">
+                            <p class="title">ФИЛЬТР СЕТЧАТЫЙ ФС-I (ФПТ)</p>
+                            <p class="articul">Артикул: 23456781</p>
+                        </td>
+    
+                        <td class="product-card__price">
+                            <span class="price_hidden">Цена:</span>
+                            <span class="price" data-cart="price">10 500</span>
+                            <span>₽</span>
+                        </td>
+    
+                        <td class="product-card__quantity">
+                            <div class="stepper">
+                                <button class="quantity-button stepDown">-</button>
+                                <input type="text" value="1" class="stepperInput" data-cart="quantity">
+                                <button class="quantity-button stepUp">+</button>
+                            </div>
+                        </td>
+    
+                        <td class="product-card__fullprice">
+                            <span class="fullprice_hidden">Итого:</span>
+                            <span class="fullprice" data-cart="summary">10 500</span>
+                            <span>₽</span>
+                        </td>
+    
+                        <td>
+                            <div class="product-card__delete">
+                                <button data-cart="remove">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.5235 9.75613C12.0122 10.245 12.0122 11.0363 11.5235 11.5238C11.2798 11.7675 10.9598 11.89 10.6396 11.89C10.3196 11.89 9.99965 11.7675 9.75589 11.5238L5.99971 7.76738L2.24353 11.5238C1.99977 11.7675 1.67979 11.89 1.35981 11.89C1.03961 11.89 0.719631 11.7675 0.475872 11.5238C-0.0127907 11.0363 -0.0127907 10.245 0.475872 9.75613L4.23228 5.99995L0.475872 2.24377C-0.0127907 1.75488 -0.0127907 0.963634 0.475872 0.476116C0.964764 -0.0125465 1.75463 -0.0125465 2.24353 0.476116L5.99971 4.23252L9.75589 0.476116C10.2448 -0.0125465 11.0346 -0.0125465 11.5235 0.476116C12.0122 0.963634 12.0122 1.75488 11.5235 2.24377L7.76713 5.99995L11.5235 9.75613Z" fill="#FAFAFA"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+    
+                    <tr class="product-card" data-cart="card">
+                        <td>
+                            <div class="product-card__preview">
+                                <img src="assets/template/images/cart/cart_img2.png" alt="">
+                            </div>
+                        </td>
+    
+                        <td class="product-card__title">
+                            <p class="title">ФИЛЬТР СЕТЧАТЫЙ ФС-I (ФПТ)</p>
+                            <p class="articul">Артикул: 23456781</p>
+                        </td>
+    
+                        <td class="product-card__price">
+                            <span class="price_hidden">Цена:</span>
+                            <span class="price" data-cart="price">10 500</span>
+                            <span>₽</span>
+                        </td>
+    
+                        <td class="product-card__quantity">
+                            <div class="stepper">
+                                <button class="quantity-button stepDown">-</button>
+                                <input type="text" value="1" class="stepperInput" data-cart="quantity">
+                                <button class="quantity-button stepUp">+</button>
+                            </div>
+                        </td>
+    
+                        <td class="product-card__fullprice">
+                            <span class="fullprice_hidden">Итого:</span>
+                            <span class="fullprice" data-cart="summary">10 500</span>
+                            <span>₽</span>
+                        </td>
+    
+                        <td>
+                            <div class="product-card__delete">
+                                <button data-cart="remove">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.5235 9.75613C12.0122 10.245 12.0122 11.0363 11.5235 11.5238C11.2798 11.7675 10.9598 11.89 10.6396 11.89C10.3196 11.89 9.99965 11.7675 9.75589 11.5238L5.99971 7.76738L2.24353 11.5238C1.99977 11.7675 1.67979 11.89 1.35981 11.89C1.03961 11.89 0.719631 11.7675 0.475872 11.5238C-0.0127907 11.0363 -0.0127907 10.245 0.475872 9.75613L4.23228 5.99995L0.475872 2.24377C-0.0127907 1.75488 -0.0127907 0.963634 0.475872 0.476116C0.964764 -0.0125465 1.75463 -0.0125465 2.24353 0.476116L5.99971 4.23252L9.75589 0.476116C10.2448 -0.0125465 11.0346 -0.0125465 11.5235 0.476116C12.0122 0.963634 12.0122 1.75488 11.5235 2.24377L7.76713 5.99995L11.5235 9.75613Z" fill="#FAFAFA"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>  
 
-                    <td class="product-card__title">
-                        <p class="title">Регулятор давления газа типа РДГ-150(Н)В</p>
-                        <p class="articul">Артикул: 23456781</p>
-                    </td>
+            <section class="cart-order">
+                <div class="cart-rezult">
+                    <span>Итого:</span>
+                    <span class="cart-fullprice" data-cart="result-final">85 900</span>
+                    <span>₽</span>
+                </div>
+    
+                <div class="cart-buttons">
+                    <button class="btn btn-cartUpdate">Обновить корзину</button>
+                    <button class="btn btn-cartMakeOrder">Оформить заказ</button>
+                </div>
+            </section>
 
-                    <td class="product-card__price">
-                        <span class="price_hidden">Цена:</span>
-                        <span class="price" data-cart="price">64 900</span>
-                        <span> ₽</span>
-                    </td>
-
-                    <td class="product-card__quantity">
-                        <div class="stepper">
-                            <button class="disabled" id="stepDown">-</button>
-                            <input type="text" value="2" id="stepperInput" data-cart="quantity">
-                            <button id="stepUp">+</button>
-                        </div>
-                    </td>
-
-                    <td class="product-card__fullprice">
-                        <span class="fullprice_hidden">Итого:</span>
-                        <span class="fullprice" data-cart="summary">64 900</span>
-                        <span>₽</span>
-                    </td>
-
-                    <td>
-                        <div class="product-card__delete">
-                            <button data-cart="remove">
-                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M11.5235 9.75613C12.0122 10.245 12.0122 11.0363 11.5235 11.5238C11.2798 11.7675 10.9598 11.89 10.6396 11.89C10.3196 11.89 9.99965 11.7675 9.75589 11.5238L5.99971 7.76738L2.24353 11.5238C1.99977 11.7675 1.67979 11.89 1.35981 11.89C1.03961 11.89 0.719631 11.7675 0.475872 11.5238C-0.0127907 11.0363 -0.0127907 10.245 0.475872 9.75613L4.23228 5.99995L0.475872 2.24377C-0.0127907 1.75488 -0.0127907 0.963634 0.475872 0.476116C0.964764 -0.0125465 1.75463 -0.0125465 2.24353 0.476116L5.99971 4.23252L9.75589 0.476116C10.2448 -0.0125465 11.0346 -0.0125465 11.5235 0.476116C12.0122 0.963634 12.0122 1.75488 11.5235 2.24377L7.76713 5.99995L11.5235 9.75613Z" fill="#FAFAFA"/>
-                                </svg>
-                            </button>
-                        </div>
-                    </td>
-                </tr>
-
-                <tr class="product-card" data-cart="card">
-                    <td>
-                        <div class="product-card__preview">
-                            <img src="assets/template/images/cart/cart_img2.png" alt="">
-                        </div>
-                    </td>
-
-                    <td class="product-card__title">
-                        <p class="title">ФИЛЬТР СЕТЧАТЫЙ ФС-I (ФПТ)</p>
-                        <p class="articul">Артикул: 23456781</p>
-                    </td>
-
-                    <td class="product-card__price">
-                        <span class="price" data-cart="price">10 500</span>
-                        <span>₽</span>
-                    </td>
-
-                    <td class="product-card__quantity">
-                        <div class="stepper">
-                            <button class="disabled" id="stepDown" data-cart="quantity-button">-</button>
-                            <input type="text" value="4" id="stepperInput" data-cart="quantity">
-                            <button id="stepUp" data-cart="quantity-button">+</button>
-                        </div>
-                    </td>
-
-                    <td class="product-card__fullprice">
-                        <span class="fullprice_hidden">Итого:</span>
-                        <span class="fullprice" data-cart="summary">10 500</span>
-                        <span>₽</span>
-                    </td>
-
-                    <td>
-                        <div class="product-card__delete">
-                            <button data-cart="remove">
-                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M11.5235 9.75613C12.0122 10.245 12.0122 11.0363 11.5235 11.5238C11.2798 11.7675 10.9598 11.89 10.6396 11.89C10.3196 11.89 9.99965 11.7675 9.75589 11.5238L5.99971 7.76738L2.24353 11.5238C1.99977 11.7675 1.67979 11.89 1.35981 11.89C1.03961 11.89 0.719631 11.7675 0.475872 11.5238C-0.0127907 11.0363 -0.0127907 10.245 0.475872 9.75613L4.23228 5.99995L0.475872 2.24377C-0.0127907 1.75488 -0.0127907 0.963634 0.475872 0.476116C0.964764 -0.0125465 1.75463 -0.0125465 2.24353 0.476116L5.99971 4.23252L9.75589 0.476116C10.2448 -0.0125465 11.0346 -0.0125465 11.5235 0.476116C12.0122 0.963634 12.0122 1.75488 11.5235 2.24377L7.76713 5.99995L11.5235 9.75613Z" fill="#FAFAFA"/>
-                                </svg>
-                            </button>
-                        </div>
-                    </td>
-                </tr>
-
-                <tr class="product-card" data-cart="card">
-                    <td>
-                        <div class="product-card__preview">
-                            <img src="assets/template/images/cart/cart_img2.png" alt="">
-                        </div>
-                    </td>
-
-                    <td class="product-card__title">
-                        <p class="title">ФИЛЬТР СЕТЧАТЫЙ ФС-I (ФПТ)</p>
-                        <p class="articul">Артикул: 23456781</p>
-                    </td>
-
-                    <td class="product-card__price">
-                        <span class="price_hidden">Цена:</span>
-                        <span class="price" data-cart="price">10 500</span>
-                        <span>₽</span>
-                    </td>
-
-                    <td class="product-card__quantity">
-                        <div class="stepper">
-                            <button class="disabled" id="stepDown">-</button>
-                            <input type="text" value="1" id="stepperInput" data-cart="quantity">
-                            <button id="stepUp">+</button>
-                        </div>
-                    </td>
-
-                    <td class="product-card__fullprice">
-                        <span class="fullprice_hidden">Итого:</span>
-                        <span class="fullprice" data-cart="summary">10 500</span>
-                        <span>₽</span>
-                    </td>
-
-                    <td>
-                        <div class="product-card__delete">
-                            <button data-cart="remove">
-                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M11.5235 9.75613C12.0122 10.245 12.0122 11.0363 11.5235 11.5238C11.2798 11.7675 10.9598 11.89 10.6396 11.89C10.3196 11.89 9.99965 11.7675 9.75589 11.5238L5.99971 7.76738L2.24353 11.5238C1.99977 11.7675 1.67979 11.89 1.35981 11.89C1.03961 11.89 0.719631 11.7675 0.475872 11.5238C-0.0127907 11.0363 -0.0127907 10.245 0.475872 9.75613L4.23228 5.99995L0.475872 2.24377C-0.0127907 1.75488 -0.0127907 0.963634 0.475872 0.476116C0.964764 -0.0125465 1.75463 -0.0125465 2.24353 0.476116L5.99971 4.23252L9.75589 0.476116C10.2448 -0.0125465 11.0346 -0.0125465 11.5235 0.476116C12.0122 0.963634 12.0122 1.75488 11.5235 2.24377L7.76713 5.99995L11.5235 9.75613Z" fill="#FAFAFA"/>
-                                </svg>
-                            </button>
-                        </div>
-                    </td>
-                </tr>
-
-                <tr class="product-card" data-cart="card">
-                    <td>
-                        <div class="product-card__preview">
-                            <img src="assets/template/images/cart/cart_img2.png" alt="">
-                        </div>
-                    </td>
-
-                    <td class="product-card__title">
-                        <p class="title">ФИЛЬТР СЕТЧАТЫЙ ФС-I (ФПТ)</p>
-                        <p class="articul">Артикул: 23456781</p>
-                    </td>
-
-                    <td class="product-card__price">
-                        <span class="price_hidden">Цена:</span>
-                        <span class="price" data-cart="price">10 500</span>
-                        <span>₽</span>
-                    </td>
-
-                    <td class="product-card__quantity">
-                        <div class="stepper">
-                            <button class="disabled" id="stepDown">-</button>
-                            <input type="text" value="1" id="stepperInput" data-cart="quantity">
-                            <button id="stepUp">+</button>
-                        </div>
-                    </td>
-
-                    <td class="product-card__fullprice">
-                        <span class="fullprice_hidden">Итого:</span>
-                        <span class="fullprice" data-cart="summary">10 500</span>
-                        <span>₽</span>
-                    </td>
-
-                    <td>
-                        <div class="product-card__delete">
-                            <button data-cart="remove">
-                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M11.5235 9.75613C12.0122 10.245 12.0122 11.0363 11.5235 11.5238C11.2798 11.7675 10.9598 11.89 10.6396 11.89C10.3196 11.89 9.99965 11.7675 9.75589 11.5238L5.99971 7.76738L2.24353 11.5238C1.99977 11.7675 1.67979 11.89 1.35981 11.89C1.03961 11.89 0.719631 11.7675 0.475872 11.5238C-0.0127907 11.0363 -0.0127907 10.245 0.475872 9.75613L4.23228 5.99995L0.475872 2.24377C-0.0127907 1.75488 -0.0127907 0.963634 0.475872 0.476116C0.964764 -0.0125465 1.75463 -0.0125465 2.24353 0.476116L5.99971 4.23252L9.75589 0.476116C10.2448 -0.0125465 11.0346 -0.0125465 11.5235 0.476116C12.0122 0.963634 12.0122 1.75488 11.5235 2.24377L7.76713 5.99995L11.5235 9.75613Z" fill="#FAFAFA"/>
-                                </svg>
-                            </button>
-                        </div>
-                    </td>
-                </tr>
-
-            
-            </tbody>
-        </table>
-
-        <section class="cart-order">
-            <div class="cart-rezult">
-                <span>Итого:</span>
-                <span class="cart-fullprice" data-cart="result-final">85 900</span>
-                <span>₽</span>
-            </div>
-
-            <div class="cart-buttons">
-                <button class="btn btn-cartUpdate">Обновить корзину</button>
-                <button class="btn btn-cartMakeOrder">Оформить заказ</button>
-            </div>
         </section>
+
     </div>
 </main>
 
@@ -411,10 +414,10 @@
                 <h4 class="footer__title">Сайт</h4>
                 <ul>
                     <li class="footer__nav--link">
-                        <a href="">О нас</a>
+                        <a href="text_page.html">О нас</a>
                     </li>
                     <li class="footer__nav--link"> 
-                        <a href="">Каталог</a>
+                        <a href="catalog.html">Каталог</a>
                     </li>
                     <li class="footer__nav--link">
                         <a href="">Документы и сертификаты</a>
