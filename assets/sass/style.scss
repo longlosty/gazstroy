@@ -100,6 +100,26 @@ h5 {
     color: #111;
 }
 
+p {
+    font-size: 16px;
+    line-height: 160%;
+    color: #111;
+
+    @media (max-width: 499px) {
+        font-size: 14px;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+ul, ol {
+    margin: 15px 0;
+    color: #111
+}
+
+
 // Header
 @import "./global/header";
 
@@ -162,17 +182,17 @@ h5 {
 }
 
 .breadcrumbs_item:last-child .breadcrumbs_link {
-    color: #111;
+    color: #111 !important;
     pointer-events: none;
 }
 
 .breadcrumbs_link {
-    color: $breadcrumbColor;
+    color: $breadcrumbColor !important;
     text-decoration: none;
     transition: color .2s ease;
 
     &:hover {
-        color: #111;
+        color: #111 !important;
     }
 }
 
@@ -220,6 +240,7 @@ h5 {
         width: 33px;
         background-color: transparent;
         transition: background-color .2s linear;
+        color: #111;
         
         &:hover {
             background-color: $light;

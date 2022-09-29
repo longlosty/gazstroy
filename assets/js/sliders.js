@@ -45,11 +45,11 @@ let mySwiper = new Swiper('.newsSwiper', {
         clickable: true,
         centeredSlides: true,
         renderBullet: function (index, className) {
-            return `<div class = "block ${className}">
-                <div class = "news__inner">
+            return `<div class ="block ${className}">
+                <div class ="news__inner">
                     <div class="news__inner--title">${result[index].title}</div>
                     <div class="news__inner--text">${result[index].text}</div>
-                    <img src = ${result[index].img} class = "news__inner--bg" />
+                    <img src = ${result[index].img} class ="news__inner--bg" />
                 </div>
             </div>`;
         }
@@ -66,16 +66,10 @@ if (track) {
     let nextSlide = slides[1];
     track.style.left = -nextSlide.offsetLeft + 'px';
 
-    const newsPrev = document.querySelector('.news__nav--prev');
-    const newsNext = document.querySelector('.news__nav--next');
-
-    slides.forEach(function(item, i, arr) {
-        let slide = i;
-    }); 
-
     const dotsUpdated = () => {
         let curr = document.querySelector('.swiper-pagination-bullet-active');
-        track.style.left = -curr.offsetLeft + 'px';
+        let next = curr.nextElementSibling;
+        track.style.left = -next.offsetLeft + 'px';
     }
 
     mySwiper.eventsListeners.paginationUpdate.push(dotsUpdated);

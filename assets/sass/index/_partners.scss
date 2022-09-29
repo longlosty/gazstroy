@@ -57,12 +57,13 @@
         width: 100%;
     }
 
-    .partners__info--title {
+    h2 {
         color: $white;
         margin-bottom: 28px;
     }
 
-    .partners__info--text {
+    p {
+        color: #fff;
         line-height: 25px / 16px * 100%;
 
         @media (max-width: 499px) {

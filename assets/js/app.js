@@ -60,8 +60,8 @@ function switchTab (path) {
 
 /* HEADER */
 // Add to card
-const productButton = document.querySelectorAll('#addToCart');
-const cartPopup = document.querySelector('.cart__popup--content');
+const addToCart = document.querySelectorAll('#addToCart');
+const cartPopup = document.querySelector('.cart__popup');
 const cartQuantity = document.querySelector('#cartQuantity');
 const productQuantity = document.querySelector('#productQuantity');
 const fullPrice = document.querySelector('#fullprice');
@@ -104,6 +104,14 @@ const generateCartProduct = (img, title, quantity, price, id) => {
     `;
 }
 
+/* Text page*/
+let introGallery = document.querySelector('.intro-gallery');
+if (introGallery) {
+    if (introGallery.children.length < 3) {
+        introGallery.style.justifyContent = "unset";
+        let 
+    }
+}
 
 /* Cart page*/
 

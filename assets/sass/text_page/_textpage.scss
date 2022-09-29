@@ -18,21 +18,25 @@
 }
 
 .title-text {
-    p {
-        margin-top: 22px;
-        color: #111;
+
+    h1 {
+        margin-bottom: 22px;
 
         @media (max-width: 499px) {
-            font-size: 14px;
             margin-top: 18px;
         }
+    }
+
+    p {
+        color: #111;
     }
 }
 
 // INTRO-GALLERY
 .intro-gallery {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     margin-top: 28px;
 
     @media (max-width: 699px) {
@@ -42,13 +46,44 @@
 
     a {
         width: 31.6%;
+        margin-bottom: 20px;
+        margin-right: 31px;
 
-        @media (max-width: 699px) {
+        &:nth-child(4n) {
+            margin-right: 31px !important;
+        }
+
+        &:nth-child(6n) {
+            margin-right: 31px !important;
+        }
+
+        &:nth-child(10n) {
+            margin-right: 31px !important;
+        }
+
+        @media (max-width: 1230px) {
+            margin-right: 20px;
+
+            &:nth-child(4n) {
+                margin-right: 20px !important;
+            }
+
+            &:nth-child(6n) {
+                margin-right: 20px !important;
+            }
+
+            &:nth-child(10n) {
+                margin-right: 20px !important;
+            }
+        }
+
+        @media (max-width: 799px) {
             width: 80%;
             margin-bottom: 15px;
         }
 
         &:last-child {
+            margin-right: 0;
             @media (max-width: 699px) {
                 margin-bottom: 0;
             }
@@ -65,11 +100,11 @@
 
 // BG-TEXT-IMG
 .bg-text-img {
-    margin-top: 50px;
+    margin-top: 40px;
     position: relative;
     display: flex;
     justify-content: space-between;
-
+    
     @media (max-width: 799px) {
         flex-direction: column;
     }
@@ -77,12 +112,11 @@
 
 .bg-text-img__content {
     color: $white;
-    width: 483px;
+    width: 40.25%;
     background-color: $dark;
-    margin-right: 20px;
 
-    @media (max-width: 999px) {
-        margin-right: 10px;
+    @media (max-width: 1199px) {
+        width: 44%;
     }
 
     @media (max-width: 799px) {
@@ -125,6 +159,7 @@
 
 
         p {
+            color: $white;
             margin-top: 28px;
 
             @media (max-width: 999px) {
@@ -140,6 +175,10 @@
 
 .bg-text-img__preview {
     width: 57.25%;
+
+    @media (max-width: 1199px) {
+        width: 55%;
+    }
 
     @media (max-width: 799px) {
         width: 100vw;
@@ -162,14 +201,6 @@
 // TITLE-UL
 .title-ul {
     margin-top: 60px;
-
-    @media (max-width: 399px) {
-        margin-top: 40px;
-    }
-}
-
-.title-ul__content {
-    margin-top: 28px;
     color: #111;
     line-height: 160%;
     max-width: 995px;
@@ -177,11 +208,14 @@
 
     @media (max-width: 499px) {
         font-size: 14px;
-        margin-top: 18px;
+    }
+
+    @media (max-width: 399px) {
+        margin-top: 40px;
     }
 
     ul {
-        margin-left: 30px;
+        margin: 0 0 0 30px;
 
         @media (max-width: 499px) {
             margin-left: 15px;
@@ -191,6 +225,15 @@
     li {
         margin-top: 5px;
     }
+
+    h3 {
+        margin-bottom: 28px;
+
+        @media (max-width: 499px) {
+            margin-bottom: 18px;
+        }
+    }
+
 }
 
 // IMG-TEXT
@@ -216,6 +259,10 @@
 
     @media (max-width: 799px) {
         max-width: unset;
+    }
+
+    @media (max-width: 499px) {
+        font-size: 14px;
     }
 }
 
@@ -248,37 +295,38 @@
 // TITLE-OL
 .title-ol {
     margin-top: 50px;
+    width: 995px;
+    line-height: 160%;
+
+    @media (max-width: 999px) {
+        width: unset;
+    }
 
     @media (max-width: 499px) {
+        font-size: 14px;
         margin-top: 40px;
     }
 
-    .title-ol__content {
-        margin-top: 20px;
-        color: #111;
-        width: 995px;
-
-        @media (max-width: 999px) {
-            width: unset;
-        }
+    h4 {
+        margin-bottom: 20px;
 
         @media (max-width: 499px) {
-            font-size: 14px;
-            margin-top: 18px;
+            margin-bottom: 18px;
         }
+    }
 
-        ol {
-            margin-left: 30px;
+    ol {
+        margin: 0;
+        margin-left: 30px;
 
-            @media (max-width: 499px) {
-                margin-left: 15px;
-            }
+        @media (max-width: 499px) {
+            margin-left: 15px;
         }
+    }
 
-        li {
-            list-style: decimal;
-            margin-top: 5px;
-        }
+    li {
+        list-style: decimal;
+        margin-top: 5px;
     }
 }
 
@@ -307,6 +355,11 @@
 
     @media (max-width: 499px) {
         font-size: 14px;
+    }
+
+    blockquote {
+        margin: 0;
+        line-height: 160%;
     }
 
     svg {
