@@ -16,9 +16,6 @@
     }
 
     .catalog-content__item{
-        &::before {
-            display: none;
-        }
 
         &:hover {
             cursor: default; 
@@ -42,11 +39,11 @@
                     border: 1px solid $dark;
                 }
             }
-        
-            .item-info {
-                width: 60%;
-            }
         }
+    }
+
+    .item-info {
+        width: 60% !important;
     }
 
     .contacts {

@@ -1,11 +1,13 @@
-/* HEADER  */
+/* 
+    HEADER
+*/
 
 // Burger menu
-const burger = document.querySelector('.menu__mbl');
+const burger = document.querySelector('.menu-mbl');
 const menu = document.querySelector('.menu');
 const body = document.querySelector('body');
-const header = document.querySelector('.page__header') || document.querySelector('.global__header');
-const headerInner = document.querySelector('.header__inner');
+const header = document.querySelector('.mainpage__header') || document.querySelector('.global__header');
+const headerInner = document.querySelector('.header-inner');
 
 burger.addEventListener("click", function () {
     burger.classList.toggle('active');
@@ -26,7 +28,9 @@ dropdownTrigger.addEventListener("click", function () {
     hasDropdown.classList.toggle('opened');
 });
 
-/* FOOTER */
+/* 
+    FOOTER 
+*/
 
 // Arrow-up button
 let t;
@@ -38,6 +42,10 @@ function up() {
     } else clearTimeout(t);
     return false;
 }
+
+/* 
+    Product page 
+*/
 
 // Tabs
 const tabBtn = document.querySelectorAll('.tab-btn');
@@ -58,8 +66,10 @@ function switchTab (path) {
     document.querySelector(`[data-tabs-target="${path}"]`).classList.add('tab-content--active');
 }
 
-/* HEADER */
-// Add to card
+/*
+    Add to card
+*/
+
 const addToCart = document.querySelectorAll('.addToCart');
 const cartProductList = document.querySelector('.popup-content__list');
 const cart = document.querySelector('.cart');
@@ -68,10 +78,6 @@ const productQuantity = document.querySelector('.productQuantity');
 const fullPrice = document.querySelector('.fullprice');
 
 let price = 0;
-
-function randomId() {
-    return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-}
 
 function priceWithoutSpaces(str) {
     return str.replace(/\s/g, '');
@@ -89,8 +95,8 @@ const minusFullPrice = (currentPrice) => {
     return price -= currentPrice;
 };
 
-const printFullPrice = (price) => {
-    fullPrice.textContent = `${normalPrice(price)}₽`
+const printFullPrice = () => {
+    fullPrice.textContent = `${normalPrice(price)} ₽`
 };
 
 const printQuantity = () => {
@@ -106,17 +112,18 @@ const printQuantity = () => {
 
     if (cartItems > 0 ) {
         let popupContent = document.querySelector('.popup-content');
-        let emptyCart = document.querySelector('.cart__empty');
+        let emptyCart = document.querySelector('.cart-empty');
         emptyCart.style.display = "none";
         popupContent.style.display = "block"
     } else {
         let popupContent = document.querySelector('.popup-content');
-        let emptyCart = document.querySelector('.cart__empty');
+        let emptyCart = document.querySelector('.cart-empty');
         emptyCart.style.display = "flex";
         popupContent.style.display = "none";
     }
 };
 
+// popup card layout
 const generateCartProduct = (img, title, price, quantity, id) => {
     return `
         <li class="popup-content__item" data-id="${id}">
@@ -129,7 +136,7 @@ const generateCartProduct = (img, title, price, quantity, id) => {
                 <span class="productQuantity">${quantity}</span> x ${price} ₽</p>
             </div>
             <div class="card-delete">
-                <button>
+                <button class="card-delete__button">
                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11.5235 9.75613C12.0122 10.245 12.0122 11.0363 11.5235 11.5238C11.2798 11.7675 10.9598 11.89 10.6396 11.89C10.3196 11.89 9.99965 11.7675 9.75589 11.5238L5.99971 7.76738L2.24353 11.5238C1.99977 11.7675 1.67979 11.89 1.35981 11.89C1.03961 11.89 0.719631 11.7675 0.475872 11.5238C-0.0127907 11.0363 -0.0127907 10.245 0.475872 9.75613L4.23228 5.99995L0.475872 2.24377C-0.0127907 1.75488 -0.0127907 0.963634 0.475872 0.476116C0.964764 -0.0125465 1.75463 -0.0125465 2.24353 0.476116L5.99971 4.23252L9.75589 0.476116C10.2448 -0.0125465 11.0346 -0.0125465 11.5235 0.476116C12.0122 0.963634 12.0122 1.75488 11.5235 2.24377L7.76713 5.99995L11.5235 9.75613Z" fill="#FAFAFA"/>
                     </svg>
@@ -164,19 +171,18 @@ products.forEach(form => {
             quantity = 1;
         }
 
-        
-
         plusFullPrice(price);
-        printFullPrice(price);
+        printFullPrice();
 
         cartProductList.insertAdjacentHTML('afterbegin', generateCartProduct(img, title, price, quantity, id))
 
         printQuantity();
-
     }
 })
 
-/* Cart page*/
+/* 
+    CART PAGE
+*/
 
  document.addEventListener("DOMContentLoaded", function () {
 
@@ -184,7 +190,7 @@ products.forEach(form => {
       window.location.reload();
     });
 
-    // Prices in card
+    // Prices in each card
     function updateCartCardsSummary() {
         const cards = document.querySelectorAll("[data-cart=card]");
 
@@ -209,7 +215,7 @@ products.forEach(form => {
         }
     }
 
-    // Result prices
+    // Resuls price
     function updateCartResult() {
         const resultFinal = document.querySelector("[data-cart=result-final]");
         const cardsAll = [...document.querySelectorAll("[data-cart=card]")];
