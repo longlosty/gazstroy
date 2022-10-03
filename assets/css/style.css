@@ -4220,12 +4220,13 @@ ul, ol {
 .product-card__title .articul {
   line-height: 233%;
   font-size: 14px;
+  margin-top: 0;
 }
 @media (max-width: 899px) {
   .product-card__title .articul {
     position: absolute;
     top: 5px;
-    left: 5px;
+    left: 10px;
   }
 }
 

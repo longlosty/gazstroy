@@ -160,11 +160,12 @@
     .articul {
         line-height: 233%;
         font-size: 14px;
+        margin-top: 0;
 
         @media (max-width: 899px) {
             position: absolute;
             top: 5px;
-            left: 5px;
+            left: 10px;
         }
     }
 }
