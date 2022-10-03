@@ -117,7 +117,13 @@ a {
 
 ul, ol {
     margin-top: 15px;
-    color: #111
+    color: #111;
+
+    li {
+        @media (max-width: 499px) {
+            font-size: 14px;
+        }
+    }
 }
 
 /* 
