@@ -1,5 +1,5 @@
 @import "./vars";
-//Intro
+//Global button styles
 .btn {
     background-color: transparent;
     color: $dark;
@@ -40,7 +40,11 @@
     }
 }
 
-//Header
+/*
+    Header buttons
+*/
+
+// Cart pop-up buttons
 .empty--button {
     background-color: $dark;
     color: $white;
@@ -52,14 +56,9 @@
     }
 }
 
-//Catalog
-.catalog--button {
-    @media(max-width: 499px) {
-        font-size: 12px;
-        padding: 8px 10px 8px 15px;
-    }
-}
-
+/*
+    Catalog section and catalog page
+*/
 .item--button {
     color: $white;
     background-color: $dark;
@@ -73,7 +72,9 @@
     }
 }
 
-//About
+/*
+    About section
+*/
 .about--button {
     color: $white;
     background-color: $dark;
@@ -85,12 +86,16 @@
     }
 }
 
-//News
+/*
+    News section
+*/
 .news--button {
     max-height: 55px;
 }
 
-//Contacts 
+/*
+    Contacts section
+*/
 .contacts--phone {
     color: $white;
     border: 1px solid $white;

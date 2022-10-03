@@ -1,4 +1,6 @@
-/* MAIN PAGE - PARTNERS SECTION */
+/* 
+    MAIN PAGE - PARTNERS SECTION 
+*/
 
 // Partners slider
 new Swiper(".partnersSwiper", {
@@ -25,7 +27,9 @@ new Swiper(".partnersSwiper", {
     }
 });
 
-/* MAIN PAGE - NEWS SECTION */
+/* 
+    MAIN PAGE - NEWS SECTION
+*/
 
 // News slider
 const newsGalary = document.querySelectorAll('#news-galary .slide')
@@ -76,7 +80,9 @@ if (track) {
 }
 
 
-/* PRODUCT PAGE */
+/* 
+    PRODUCT PAGE
+*/
 
 // Popular slider
 new Swiper(".popularSwiper", {
@@ -131,7 +137,5 @@ new Swiper(".popularSwiper", {
         320: {
             slidesPerView: 1,
         },
-        
-
     }
 })

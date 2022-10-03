@@ -1,6 +1,6 @@
 @import "../base/vars";
 
-.page__header {
+.mainpage__header {
     position: absolute;
     padding-top: 29px;
     left: 0;
@@ -53,7 +53,7 @@
     }
 }
 
-.header__inner {
+.header-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -65,7 +65,7 @@
     }
 }
 
-.header__logo {
+.header-logo {
     max-width: 357px;
     z-index: 20;
 
@@ -80,17 +80,16 @@
     @media (max-width: 399px) {
         width: 160px;
     }
- 
 }
 
-.logo {
+.header-logo__wrapper {
     display: block;
     max-height: 170px;
     margin: 0 auto;
     text-align: center;
     width: 100%;
 
-    .logo__image {
+    img {
         max-width: 100%;
         height: auto;
     }
@@ -117,7 +116,7 @@
 
 }
 
-.menu__list {
+.menu-list {
     display: flex;
     color: $white;
 
@@ -149,7 +148,7 @@
     right: 0;
     z-index: 15;
 
-    .menu__list {
+    .menu-list {
         li {
             padding-left: unset;
         }
@@ -163,13 +162,13 @@
         display: none;
     }
 
-    .menu__link {
+    .menu-list__link {
         font-weight: 500;
     }
 
 }
 
-.menu__link {
+.menu-list__link {
     color: inherit;
     text-decoration: none;
     position: relative;
@@ -236,8 +235,10 @@
     li {
         padding: unset;
     }
+}
 
-    .dropdown__item {
+.dropdown-list {
+    li {
         list-style: none;
         border-bottom: 1px solid #c4c4c4;
         transition: background-color 0.2s ease;
@@ -298,7 +299,7 @@
     transition: all .2s linear;
 }
 
-.menu__catalog {
+.menu-catalog {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -312,7 +313,7 @@
     }
 }
 
-.menu__mbl {
+.menu-mbl {
     display: none;
     z-index: 20;
 
@@ -354,7 +355,7 @@
     }
 }
 
-.menu__mbl.active {
+.menu-mbl.active {
     z-index: 20;
     &::before {
         transform: rotate(45deg);
@@ -472,12 +473,12 @@
     margin-right: 5px;
 }
 
-.cart__empty {
+.cart-empty {
     height: 153px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    .empty__title {
+    .cart-empty__title {
         color: $dark;
         text-transform: uppercase;
         margin-bottom: 25px;
@@ -611,7 +612,7 @@
     }
 }
 
-.cart__mbl {
+.cart-mbl {
     margin-right: 60px;
     display: none;
 

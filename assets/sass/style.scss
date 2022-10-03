@@ -120,44 +120,10 @@ ul, ol {
     color: #111
 }
 
+/* 
+    Breadcrumbs 
+*/
 
-// Header
-@import "./global/header";
-
-// Intro
-@import "./index/intro";
-
-// Partners
-@import "./index/partners";
-
-// Catalog
-@import "./index/catalog";
-
-// About
-@import "./index/about";
-
-// News
-@import "./index/news";
-
-// Map
-.map {
-    margin-top: 67px;
-    height: 436px;
-    filter: grayscale(1);
-
-    @media (max-width: 799px) {
-        margin-top: 41px;
-    }
-}
-
-
-// Contacts
-@import "./index/contacts";
-
-// Footer
-@import "./global/footer";
-
-// Breadcrumbs
 .breadcrumbs{
     padding-bottom: 47px;
     padding-top: 28px;
@@ -199,24 +165,18 @@ ul, ol {
     }
 }
 
-// Text Page
-@import "./text_page/textpage";
+// Map
+.map {
+    margin-top: 67px;
+    height: 436px;
+    filter: grayscale(1);
 
-// Contact page
-@import "./contact_page/contactpage";
-
-// Catalog page
-@import "./catalog_page/catalog";
-
-// Error pages
-@import "./error_pages/error";
-
-// Goods pages
-@import "./goods_pages/goods";
-@import "./goods_pages/product";
+    @media (max-width: 799px) {
+        margin-top: 41px;
+    }
+}
 
 // Stepper
-
 .stepper {
     display: flex;
     height: 55px;
@@ -253,6 +213,39 @@ ul, ol {
         }
     }
 }
+
+/* 
+    Header 
+*/
+@import "./global/header";
+
+/* 
+    Footer 
+*/
+@import "./global/footer";
+
+/* 
+    Pages
+*/
+
+// Main page
+@import "./main_page/mainpage";
+
+// Text page
+@import "./text_page/textpage";
+
+// Contact page
+@import "./contact_page/contactpage";
+
+// Catalog page
+@import "./catalog_page/catalog";
+
+// Error pages
+@import "./error_pages/error";
+
+// Goods pages
+@import "./goods_pages/goods";
+@import "./goods_pages/product";
 
 // Cart pages
 @import "./cart_pages/cart";

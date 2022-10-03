@@ -1,32 +1,56 @@
-/* Colors */
-// Global
+/* 
+    Colors
+*/
+
+// Main colors
 $dark: #00233E;
 $light: #F3F3F3;
 $white: #FFFFFF;
 
-// Header
+/* 
+    Header section
+*/
+
+// Dropdown background color
 $dropdown: #88bcdfb5;
 
-// News
-$news__nav--prev: #ABABAB;
 
-// Contacts
+/* 
+    News section
+*/
+
+// Disabled nav arrow style
+$news__nav--disabled: #ABABAB;
+
+/* 
+    Contacts section
+*/
+
+// Error and active styles colors
 $error: #FF0000;
 $active: #CACACA;
 
-// Breadcrumbs 
+/* 
+    Breadcrumbs section
+*/
 $breadcrumbColor: #606060;
 
-// Textpage
+/* 
+    Text page colors
+*/
 $tabletext: #393939;
 $tableborder: #D3D3D3;
 
-// Goods page
+/* 
+    Goods page colors
+*/
 $sort: #777777;
 $goodsborder: #D7D7D7;
 
 
-// Product page
+/* 
+    Product page colors
+*/
 $product_nav: #606060;
 $stepperborder: #9F9F9F;
 $tablistborder: #606060;

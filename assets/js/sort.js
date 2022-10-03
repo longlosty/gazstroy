@@ -1,4 +1,6 @@
-/* GOODS PAGES */
+/*
+    GOODS PAGES 
+*/
 
 // Product sortings
 const sortingBtn = document.querySelectorAll('.sortingBtn');
