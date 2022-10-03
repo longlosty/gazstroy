@@ -1600,7 +1600,7 @@ ul, ol {
 }
 @media (max-width: 499px) {
   .catalog-intro {
-    margin-bottom: 11px;
+    margin-bottom: 36px;
   }
 }
 
@@ -2633,43 +2633,6 @@ ul, ol {
      object-position: left;
 }
 
-.title-ul {
-  margin-top: 60px;
-  color: #111;
-  line-height: 160%;
-  max-width: 995px;
-  font-size: 16px;
-}
-@media (max-width: 499px) {
-  .title-ul {
-    font-size: 14px;
-  }
-}
-@media (max-width: 399px) {
-  .title-ul {
-    margin-top: 40px;
-  }
-}
-.title-ul ul {
-  margin: 0 0 0 30px;
-}
-@media (max-width: 499px) {
-  .title-ul ul {
-    margin-left: 15px;
-  }
-}
-.title-ul li {
-  margin-top: 5px;
-}
-.title-ul h3 {
-  margin-bottom: 28px;
-}
-@media (max-width: 499px) {
-  .title-ul h3 {
-    margin-bottom: 18px;
-  }
-}
-
 .img-text {
   margin-top: 50px;
   display: flex;
@@ -2731,44 +2694,6 @@ ul, ol {
      object-fit: cover;
   -o-object-position: left;
      object-position: left;
-}
-
-.title-ol {
-  margin-top: 50px;
-  width: 995px;
-  line-height: 160%;
-}
-@media (max-width: 999px) {
-  .title-ol {
-    width: unset;
-  }
-}
-@media (max-width: 499px) {
-  .title-ol {
-    font-size: 14px;
-    margin-top: 40px;
-  }
-}
-.title-ol h4 {
-  margin-bottom: 20px;
-}
-@media (max-width: 499px) {
-  .title-ol h4 {
-    margin-bottom: 18px;
-  }
-}
-.title-ol ol {
-  margin: 0;
-  margin-left: 30px;
-}
-@media (max-width: 499px) {
-  .title-ol ol {
-    margin-left: 15px;
-  }
-}
-.title-ol li {
-  list-style: decimal;
-  margin-top: 5px;
 }
 
 .quote {
@@ -3075,7 +3000,7 @@ ul, ol {
 }
 @media (max-width: 399px) {
   .contact-ask {
-    top: 440px;
+    top: 450px;
   }
 }
 .contact-ask a {
@@ -3132,7 +3057,9 @@ ul, ol {
   .ask-inner .contacts-call {
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin-top: 30px;
+    max-width: 229px;
   }
 }
 @media (max-width: 399px) {
@@ -3459,19 +3386,9 @@ ul, ol {
 .goods_page {
   padding-bottom: 55px;
 }
-@media (max-width: 999px) {
-  .goods_page {
-    padding-top: 55px;
-  }
-}
 @media (max-width: 699px) {
   .goods_page {
     padding-bottom: 75px;
-  }
-}
-@media (max-width: 499px) {
-  .goods_page {
-    padding-top: 40px;
   }
 }
 .goods_page .contacts {

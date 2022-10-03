@@ -64,7 +64,7 @@
     }
 
     @media (max-width: 399px) {
-        top: 440px;
+        top: 450px;
     }
 
     a {
@@ -116,7 +116,9 @@
         @media (max-width: 525px) {
             display: flex;
             flex-direction: column;
+            align-items: center;
             margin-top: 30px;
+            max-width: 229px;
         }
 
         @media (max-width: 399px) {
