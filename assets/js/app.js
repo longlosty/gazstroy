@@ -60,11 +60,12 @@ function switchTab (path) {
 
 /* HEADER */
 // Add to card
-const addToCart = document.querySelectorAll('#addToCart');
-const cartPopup = document.querySelector('.cart__popup');
-const cartQuantity = document.querySelector('#cartQuantity');
-const productQuantity = document.querySelector('#productQuantity');
-const fullPrice = document.querySelector('#fullprice');
+const addToCart = document.querySelectorAll('.addToCart');
+const cartProductList = document.querySelector('.popup-content__list');
+const cart = document.querySelector('.cart');
+const cartQuantity = document.querySelector('.cartQuantity');
+const productQuantity = document.querySelector('.productQuantity');
+const fullPrice = document.querySelector('.fullprice');
 
 let price = 0;
 
@@ -80,38 +81,100 @@ function normalPrice(str) {
     return String(str).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1');
 }
 
-const generateCartProduct = (img, title, quantity, price, id) => {
-    return `
+const plusFullPrice = (currentPrice) => {
+    return price += currentPrice;
+};
 
-        <div class="popup_card" data-id="${id}">
-            <div class="card_preview">
+const minusFullPrice = (currentPrice) => {
+    return price -= currentPrice;
+};
+
+const printFullPrice = (price) => {
+    fullPrice.textContent = `${normalPrice(price)}₽`
+};
+
+const printQuantity = () => {
+    let cartItems = 0;
+    let products = document.querySelectorAll('.popup-content__item');
+
+    products.forEach(el => {
+        let itemQuantity = +el.querySelector('.productQuantity').textContent;
+        cartItems +=itemQuantity;  
+    })
+
+    cartQuantity.textContent = cartItems;
+
+    if (cartItems > 0 ) {
+        let popupContent = document.querySelector('.popup-content');
+        let emptyCart = document.querySelector('.cart__empty');
+        emptyCart.style.display = "none";
+        popupContent.style.display = "block"
+    } else {
+        let popupContent = document.querySelector('.popup-content');
+        let emptyCart = document.querySelector('.cart__empty');
+        emptyCart.style.display = "flex";
+        popupContent.style.display = "none";
+    }
+};
+
+const generateCartProduct = (img, title, price, quantity, id) => {
+    return `
+        <li class="popup-content__item" data-id="${id}">
+            <div class="popup-item__preview">
                 <img src="${img}" alt="">
             </div>
-            <div class="card_info">
-                <p class="card_title">${title}</p>
+            <div class="popup-item__info">
+                <p>${title}</p>
                 <p class="card_price">
-                <span id="productQuantity">${quantity}</span>х ${price}</p>
+                <span class="productQuantity">${quantity}</span> x ${price} ₽</p>
             </div>
-            <div class="card_delete">
+            <div class="card-delete">
                 <button>
                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11.5235 9.75613C12.0122 10.245 12.0122 11.0363 11.5235 11.5238C11.2798 11.7675 10.9598 11.89 10.6396 11.89C10.3196 11.89 9.99965 11.7675 9.75589 11.5238L5.99971 7.76738L2.24353 11.5238C1.99977 11.7675 1.67979 11.89 1.35981 11.89C1.03961 11.89 0.719631 11.7675 0.475872 11.5238C-0.0127907 11.0363 -0.0127907 10.245 0.475872 9.75613L4.23228 5.99995L0.475872 2.24377C-0.0127907 1.75488 -0.0127907 0.963634 0.475872 0.476116C0.964764 -0.0125465 1.75463 -0.0125465 2.24353 0.476116L5.99971 4.23252L9.75589 0.476116C10.2448 -0.0125465 11.0346 -0.0125465 11.5235 0.476116C12.0122 0.963634 12.0122 1.75488 11.5235 2.24377L7.76713 5.99995L11.5235 9.75613Z" fill="#FAFAFA"/>
                     </svg>
                 </button>
             </div>
-        </div>
+        </li>  
 
     `;
 }
 
-/* Text page*/
-let introGallery = document.querySelector('.intro-gallery');
-if (introGallery) {
-    if (introGallery.children.length < 3) {
-        introGallery.style.justifyContent = "unset";
-        let 
+let products  = document.querySelectorAll('form.goods-item');
+console.log(products);
+
+products.forEach(form => {
+
+    form.onsubmit = (e) => {
+
+        e.preventDefault();
+        e.stopPropagation();
+        
+        let product = e.currentTarget;
+        let img = product.querySelector('.goods-item__preview img').src;
+        let title = product.querySelector('h5').textContent;
+        let price = parseInt(priceWithoutSpaces(product.querySelector('h6').textContent));
+
+        let quantity;
+        let id = 1;
+        
+        if (product.querySelector('.stepperInput')) {
+            quantity = product.querySelector("[data-cart=quantity]").value;
+        } else {
+            quantity = 1;
+        }
+
+        
+
+        plusFullPrice(price);
+        printFullPrice(price);
+
+        cartProductList.insertAdjacentHTML('afterbegin', generateCartProduct(img, title, price, quantity, id))
+
+        printQuantity();
+
     }
-}
+})
 
 /* Cart page*/
 
@@ -131,8 +194,10 @@ if (introGallery) {
             let quantity = card.querySelector("[data-cart=quantity]").value;
             const summaryElement = card.querySelector("[data-cart=summary]");
 
-            price = price.replace(/\s/g, "");
-            quantity = quantity.replace(/\s/g, "");
+            // price = price.replace(/\s/g, "");
+            price = price.replace(/[\s.,%]/g, '');
+            // quantity = quantity.replace(/\s/g, "");
+            quantity = quantity.replace(/[\s.,%]/g, '');
 
             price = parseInt(price);
             quantity = parseInt(quantity);
@@ -159,7 +224,8 @@ if (introGallery) {
             const cardSummary = card.querySelector("[data-cart=summary]");
             if (cardSummary) {
                 let value = cardSummary.textContent;
-                value = value.replace(/\s/g, "");
+                // value = value.replace(/\s/g, "");
+                value = value.replace(/[\s.,%]/g, '');
                 value = parseInt(value);
 
                 resultValue = resultValue + value;
@@ -184,7 +250,8 @@ if (introGallery) {
     // Input tests
     function quantityInputValidate(input) {
         let value = input.value;
-        value = value.replace(/\s/g, "");
+        // value = value.replace(/\s/g, "");
+        value = value.replace(/[\s.,%]/g, '');
         value = parseInt(value);
   
         if (!Number.isInteger(value) || value < 0) {

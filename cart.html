@@ -100,42 +100,45 @@
                         <div class="cart-block">
                             <p>Корзина</p>
                             <p>
-                            <span id="cartQuantity">0</span>товаров</p>
+                            <span class="cartQuantity">0</span>товаров</p>
                         </div>
                     </a>
-                    <div class="cart__popup">
+                    <div class="cart-popup">
                         <!-- <div class="cart__empty">
                             <div class="empty__title">Корзина пуста</div>
                             <button class="btn--solid empty--button">Перейти в каталог</button>
                         </div> -->
 
-                        <div class="cart__popup--content">
-                            <div class="popup_card">
-                                <div class="card_preview">
-                                    <img src="assets/template/images/cart/cart_img1.png" alt="">
-                                </div>
-                                <div class="card_info">
-                                    <p class="card_title">Рeгулятор давления газа типа РДГ-150Н(В)</p>
-                                    <p class="card_price">
-                                    <span id="productQuantity">1</span>х 64 900 ₽</p>
-                                </div>
-                                <div class="card_delete">
-                                    <button>
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M11.5235 9.75613C12.0122 10.245 12.0122 11.0363 11.5235 11.5238C11.2798 11.7675 10.9598 11.89 10.6396 11.89C10.3196 11.89 9.99965 11.7675 9.75589 11.5238L5.99971 7.76738L2.24353 11.5238C1.99977 11.7675 1.67979 11.89 1.35981 11.89C1.03961 11.89 0.719631 11.7675 0.475872 11.5238C-0.0127907 11.0363 -0.0127907 10.245 0.475872 9.75613L4.23228 5.99995L0.475872 2.24377C-0.0127907 1.75488 -0.0127907 0.963634 0.475872 0.476116C0.964764 -0.0125465 1.75463 -0.0125465 2.24353 0.476116L5.99971 4.23252L9.75589 0.476116C10.2448 -0.0125465 11.0346 -0.0125465 11.5235 0.476116C12.0122 0.963634 12.0122 1.75488 11.5235 2.24377L7.76713 5.99995L11.5235 9.75613Z" fill="#FAFAFA"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
+                        <div class="popup-content">
+                            <ul class="popup-content__list">
+                                <li class="popup-content__item">
+                                    <div class="popup-item__preview">
+                                        <img src="assets/template/images/cart/cart_img1.png" alt="">
+                                    </div>
+                                    <div class="popup-item__info">
+                                        <p>Рeгулятор давления газа типа РДГ-150Н(В)</p>
+                                        <p class="card_price">
+                                        <span class="productQuantity">1</span>х 64 900 ₽</p>
+                                    </div>
+                                    <div class="card-delete">
+                                        <button>
+                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M11.5235 9.75613C12.0122 10.245 12.0122 11.0363 11.5235 11.5238C11.2798 11.7675 10.9598 11.89 10.6396 11.89C10.3196 11.89 9.99965 11.7675 9.75589 11.5238L5.99971 7.76738L2.24353 11.5238C1.99977 11.7675 1.67979 11.89 1.35981 11.89C1.03961 11.89 0.719631 11.7675 0.475872 11.5238C-0.0127907 11.0363 -0.0127907 10.245 0.475872 9.75613L4.23228 5.99995L0.475872 2.24377C-0.0127907 1.75488 -0.0127907 0.963634 0.475872 0.476116C0.964764 -0.0125465 1.75463 -0.0125465 2.24353 0.476116L5.99971 4.23252L9.75589 0.476116C10.2448 -0.0125465 11.0346 -0.0125465 11.5235 0.476116C12.0122 0.963634 12.0122 1.75488 11.5235 2.24377L7.76713 5.99995L11.5235 9.75613Z" fill="#FAFAFA"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </li>  
+                            </ul>
 
-                            <div class="popup_result">
-                                <span>Сумма:</span>
-                                <span class="fullprice" id="#fullprice">64 900 ₽</span>
-                            </div>
-
-                            <div class="popup_buttons">
-                                <button class="btn">Оформить заказ</button>
-                                <button class="btn">Перейти в корзину</button>
+                            <div class="popup-content__bottom">
+                                <div class="popup-content__fullprice">
+                                    <span>Сумма:</span>
+                                    <span class="fullprice">64 900 ₽</span>
+                                </div>
+                                <div class="popup_content__buttons">
+                                    <button class="btn">Оформить заказ</button>
+                                    <button class="btn">Перейти в корзину</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -157,11 +160,11 @@
     <div class="container">
         <section class="breadcrumbs">
             <ul class="breadcrumbs_list">
-                <li class="breadcrumbs_item">
-                    <a href="index.html" class="breadcrumbs_link">Главная</a>
+                <li>
+                    <a href="index.html">Главная</a>
                 </li>
-                <li class="breadcrumbs_item">
-                    <a href="#" class="breadcrumbs_link">Корзина</a>
+                <li>
+                    <a href="#">Корзина</a>
                 </li>
             </ul>
         </section>
@@ -402,32 +405,32 @@
 
 <footer class="footer">
     <div class="container">
-        <div class="footer__inner">
-            <div class="footer__about">
-                <div class="footer__logo">
+        <div class="footer-inner">
+            <div class="footer-about">
+                <div class="footer-about__logo">
                     <img src="./assets/template/images/footer/footer-logo.png" alt="" srcset="">
                 </div>
-                <div class="footer__text">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру 
+                <div class="footer-about__text">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру 
                 сгенерировать несколько абзацев более менее осмысленного текста рыбы.</div>
             </div>
 
-            <div class="footer__nav">
-                <h4 class="footer__title">Сайт</h4>
-                <ul>
-                    <li class="footer__nav--link">
+            <div class="footer-nav">
+                <h5>Сайт</h5>
+                <ul class="footer-nav-list">
+                    <li>
                         <a href="text_page.html">О нас</a>
                     </li>
-                    <li class="footer__nav--link"> 
+                    <li> 
                         <a href="catalog.html">Каталог</a>
                     </li>
-                    <li class="footer__nav--link">
+                    <li>
                         <a href="">Документы и сертификаты</a>
                     </li>
                 </ul>
             </div>
 
-            <div class="footer__contacts">
-                <h4 class="footer__title">Контакты</h4>
+            <div class="footer-contacts">
+                <h5>Контакты</h5>
                 <p>Время работы: 09:00 до 18:00</p>
                 <p>
                     <a href="tel:88452762589">8 (8452) 76-25-89</a>
@@ -438,7 +441,7 @@
                 <p>г. Саратов, улица имени В.И. Осипова, 1к5</p>
             </div>
 
-            <div class="footer__up">
+            <div class="footer-up">
                 <a href="" onclick="return up()">
                     <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M8.70711 0.292892C8.31658 -0.0976314 7.68342 -0.0976315 7.29289 0.292892L0.928933 6.65685C0.538408 7.04738 0.538408 7.68054 0.928933 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292892ZM9 18L9 1L7 1L7 18L9 18Z" fill="white"/>
@@ -448,11 +451,11 @@
         </div>
         
         <div class="copyright">
-            <div class="copyright__confidency">
+            <div class="copyright-confidency">
                 <p>©2022, ТД Газстрой. Все права защищены</p>
                 <a href="">Политика конфиденциальности</a>
             </div>
-            <div class="copyright__copy">
+            <div class="copyright-copy">
                 <a href="https://site-creative.ru/" target="_blank">Разработано в «Сайт-Креатив»</a>
             </div>
         </div>

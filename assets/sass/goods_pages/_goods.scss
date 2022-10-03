@@ -33,7 +33,7 @@
         margin-top: 25px;
     }
 
-    button {
+    label {
         font-weight: 500;
         line-height: 233%;
         color: $sort;
@@ -53,6 +53,14 @@
             color: #111;
             cursor: pointer;
         }
+
+        span {
+            color: #777;
+        }
+    }
+
+    .sortingBtn:checked ~ span {
+        color: #111;
     }
 
     span {

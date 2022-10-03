@@ -104,6 +104,7 @@ p {
     font-size: 16px;
     line-height: 160%;
     color: #111;
+    margin-top: 15px;
 
     @media (max-width: 499px) {
         font-size: 14px;
@@ -115,7 +116,7 @@ a {
 }
 
 ul, ol {
-    margin: 15px 0;
+    margin-top: 15px;
     color: #111
 }
 
@@ -168,34 +169,35 @@ ul, ol {
 
 .breadcrumbs_list {
     list-style: none;
-}
 
-.breadcrumbs_item {
-    display: inline;
-}
+    li {
+        display: inline;
 
-.breadcrumbs_item:not(:last-child)::after {
-    position: static;
-    content: "/";
-    margin: 0 5px;
-    color: $breadcrumbColor;
-}
+        &:not(:last-child)::after {
+            position: static;
+            content: "/";
+            margin: 0 5px;
+            color: $breadcrumbColor;
+        }
 
-.breadcrumbs_item:last-child .breadcrumbs_link {
-    color: #111 !important;
-    pointer-events: none;
-}
+        &:last-child {
+            a {
+                color: #111 !important;
+                pointer-events: none;
+            }
+        }
 
-.breadcrumbs_link {
-    color: $breadcrumbColor !important;
-    text-decoration: none;
-    transition: color .2s ease;
+        a {
+            color: $breadcrumbColor !important;
+            text-decoration: none;
+            transition: color .2s ease;
 
-    &:hover {
-        color: #111 !important;
+            &:hover {
+                color: #111 !important;
+            }
+        }
     }
 }
-
 
 // Text Page
 @import "./text_page/textpage";

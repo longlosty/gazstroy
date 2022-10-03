@@ -123,43 +123,26 @@
             margin-bottom: 10px;
         }
 
+        @media (min-width: 699px) and (max-width: 799px) {
+            margin-right: 55px;
+        }
+
         @media (max-width: 599px) {
             margin-bottom: unset
         }
-    }
 
-    .confidency {
-        font-size: 12px;
-        line-height: 15px;
-        max-width: 483px;   
-        
-        @media (max-width: 999px) {
-            max-width: 410px;
-        }
-
-        @media (max-width: 799px) {
+        p {
+            font-size: 12px;
+            line-height: 15px;
+            max-width: 483px;
+            color: $white;  
             margin-bottom: 10px;
-            max-width: 350px;
-        }
-
-        @media (max-width: 699px) {
-            margin-bottom: 10px;
-            max-width: 330px;
-        }
-
-        @media (max-width: 599px) {
-            margin: 22px 25px 20px 31px;
-            max-width: unset;
-        }
-
-        @media (min-width: 399px) and (max-width: 599px) {
-            text-align: center;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-            position: relative;
+            
+            a {
+                text-decoration: none;
+                color: inherit;
+                position: relative;
+            }
         }
     }
 }

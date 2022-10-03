@@ -15,9 +15,14 @@
     p {
         line-height: 160%;
     }
+
+    .breadcrumbs {
+        padding-bottom: 0;
+    }
 }
 
-.title-text {
+.text-section {
+    padding-top: 50px;
 
     h1 {
         margin-bottom: 22px;
@@ -49,43 +54,44 @@
         margin-bottom: 20px;
         margin-right: 31px;
 
-        &:nth-child(4n) {
-            margin-right: 31px !important;
-        }
-
-        &:nth-child(6n) {
-            margin-right: 31px !important;
-        }
-
-        &:nth-child(10n) {
-            margin-right: 31px !important;
-        }
-
-        @media (max-width: 1230px) {
-            margin-right: 20px;
-
-            &:nth-child(4n) {
-                margin-right: 20px !important;
-            }
-
-            &:nth-child(6n) {
-                margin-right: 20px !important;
-            }
-
-            &:nth-child(10n) {
-                margin-right: 20px !important;
-            }
-        }
-
         @media (max-width: 799px) {
             width: 80%;
             margin-bottom: 15px;
+            margin-right: 0 !important;
         }
 
         &:last-child {
             margin-right: 0;
             @media (max-width: 699px) {
                 margin-bottom: 0;
+            }
+        }
+
+        &:nth-child(4n) {
+            margin-right: 31px;
+        }
+
+        &:nth-child(6n) {
+            margin-right: 31px;
+        }
+
+        &:nth-child(10n) {
+            margin-right: 31px;
+        }
+
+        @media (max-width: 1230px) {
+            margin-right: 20px;
+
+            &:nth-child(4n) {
+                margin-right: 20px;
+            }
+
+            &:nth-child(6n) {
+                margin-right: 20px;
+            }
+
+            &:nth-child(10n) {
+                margin-right: 20px;
             }
         }
 
@@ -360,6 +366,18 @@
     blockquote {
         margin: 0;
         line-height: 160%;
+
+        a {
+            color: $light;
+        }
+
+        ul, ol, p {
+            color: $white;
+        }
+
+        p:first-child {
+            margin-top: 0;
+        }
     }
 
     svg {
@@ -398,7 +416,6 @@
 
 .gallery-item {
     width: 31.6%;
-    margin-top: 30px;
     position: relative;
     cursor: pointer;
 
@@ -443,6 +460,24 @@
 
     &.is-visible {
         display: block;
+    }
+}
+
+.gallery-item:nth-child(n+4) {
+    @media (min-width: 799px) {
+        margin-top: 30px;
+    }
+}
+
+.gallery-item:nth-child(n+3) {
+    @media (max-width: 799px) {
+        margin-top: 30px;
+    }
+}
+
+.gallery-item+.gallery-item {
+    @media (max-width: 599px) {
+        margin-top: 30px;
     }
 }
 

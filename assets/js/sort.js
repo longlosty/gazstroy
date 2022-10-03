@@ -32,12 +32,11 @@ function descdendingSort(sortType) {
 }
 
 
-const rateSort = document.querySelector('#rateSort');
+const popularSort = document.querySelector('#popularSort');
 
-rateSort.addEventListener('click', () => {
+popularSort.addEventListener('click', () => {
     sortingBtn.forEach(el => el.style.color = "inherit");
 
-    rateSort.style.color = "#111";
     descdendingSort('data-rating');
 });
 
@@ -47,9 +46,7 @@ const priceSort = document.querySelector('#priceSort');
 priceSort.addEventListener('click', () => {
     sortingBtn.forEach(el => el.style.color = "inherit");
 
-    priceSort.style.color = "#111";
     descdendingSort('data-price');
-
 })
 
 
@@ -58,8 +55,7 @@ const nameSort = document.querySelector('#nameSort');
 nameSort.addEventListener('click', () => {
     sortingBtn.forEach(el => el.style.color = "inherit");
 
-    nameSort.style.color = "#111";
-    
+ 
     for (let i = 0; i < goods.children.length; i++) {
         for (let j = i; j < goods.children.length; j++) {
             if (goods.children[i].getAttribute('data-name') > goods.children[j].getAttribute('data-name')) {
@@ -74,9 +70,6 @@ const isNewSort = document.querySelector('#isNewSort');
 
 isNewSort.addEventListener('click', () => {
     sortingBtn.forEach(el => el.style.color = "inherit");
-
-    isNewSort.style.color = "#111";
-    // descdendingSort('data-new');
 
     for (let i = 0; i < goods.children.length; i++) {
         for (let j = i; j < goods.children.length; j++) {

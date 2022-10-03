@@ -24,19 +24,20 @@
     @media (max-width: 499px) {
         font-size: 14px;
     }
-}
 
-.contact-list__item {
-    display: flex;
-    margin-top: 32px;
+    li {
+        display: flex;
+        align-items: center;
+        margin-top: 32px;
 
-    a {
-        text-decoration: none;
-        color: inherit;
-    }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-    svg {
-        margin-right: 18px;
+        svg {
+            margin-right: 18px;
+        }
     }
 }
 
@@ -51,7 +52,7 @@
 
     @media (max-width: 799px) {
         width: 100%;
-        top: 470px;
+        top: 490px;
     }
 
     @media (min-width: 799px) and (max-width: 925px) {
@@ -121,6 +122,35 @@
         @media (max-width: 399px) {
             margin-top: 20px;
         }
+
+        p {
+            color: $white;
+            font-size: 12px;
+            line-height: 15px;
+            margin-top: 33px;
+            margin-bottom: 73px;
+        
+            @media (min-width: 999px) {
+                width: 483px;
+            }
+
+            @media (max-width: 925px) {
+                margin-bottom: 50px;
+            }
+
+            @media (min-width: 799px) and (max-width: 925px) {
+                text-align: center;
+            }
+
+            @media (max-width: 525px) {
+                margin: 25px 0 30px 0;
+                text-align: center;
+            }
+
+            @media (max-width: 399px) {
+                text-align: unset;
+            }
+        }
     }
     
     .contacts--call {
@@ -147,34 +177,6 @@
 
         @media (max-width: 799px) {
             margin-right: 15px;
-        }
-    }
-
-    .confidency {
-        font-size: 12px;
-        line-height: 15px;
-        margin-top: 33px;
-        margin-bottom: 73px;
-    
-        @media (min-width: 999px) {
-            width: 483px;
-        }
-
-        @media (max-width: 925px) {
-            margin-bottom: 50px;
-        }
-
-        @media (min-width: 799px) and (max-width: 925px) {
-            text-align: center;
-        }
-
-        @media (max-width: 525px) {
-            margin: 25px 0 30px 0;
-            text-align: center;
-        }
-
-        @media (max-width: 399px) {
-            text-align: unset;
         }
     }
 }
